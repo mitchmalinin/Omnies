@@ -1,7 +1,8 @@
 import Head from "next/head"
-import Image from "next/image"
 import styled from "styled-components"
 import { theme } from "../components/palette"
+import Image from "next/image"
+import Color from "color"
 
 const Wrapper = styled.div`
   background-color: ${theme.grey};
@@ -10,6 +11,7 @@ const Wrapper = styled.div`
 const HeroWrapper = styled.div`
   height: 100vh;
   color: ${theme.white};
+  position: relative;
 `
 
 const NavWrapper = styled.nav`
@@ -27,11 +29,58 @@ const NavItemsWrapper = styled.ul`
 
 const NavItem = styled.li`
   list-style-type: none;
+  cursor: pointer;
 `
 
 const Logo = styled.p`
-  font-family: heater;
-  font-size: 40px;
+  /* font-family: heater; */
+  font-size: 2.5rem;
+`
+
+const HeroContentWrapper = styled.div`
+  padding: 10rem 0 0 8.5rem;
+`
+
+const HeroTitle = styled.h1`
+  /* font-family: heater; */
+  font-size: 10rem;
+  margin-bottom: 1rem;
+`
+
+const HeroSubtitle = styled.h2`
+  font-size: 3rem;
+  margin-bottom: 7.25rem;
+`
+
+const EnterButton = styled.button`
+  border: 1px solid ${theme.white};
+  background-color: ${Color(theme.red).alpha(0.2)};
+  color: ${theme.white};
+  padding: 0.5em 2em;
+  font-size: 1.25rem;
+`
+
+const HeroGodsImgWrapper = styled.div`
+  position: absolute;
+  left: 50%;
+  bottom: 0%;
+  transform: translate(-50%, 0%);
+  text-align: center;
+  height: 800px;
+  width: 800px;
+`
+
+const BorderDivider = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -30px;
+`
+
+const MoreLoreWrapper = styled.div`
+  height: 500px;
+  position: relative;
+  background-color: black;
 `
 
 export default function Home() {
@@ -52,7 +101,31 @@ export default function Home() {
             <NavItem>ROADMAP</NavItem>
           </NavItemsWrapper>
         </NavWrapper>
+        <HeroContentWrapper>
+          <HeroTitle>Omnia</HeroTitle>
+          <HeroSubtitle>REALM OF THE OMNIES</HeroSubtitle>
+          <EnterButton>Enter</EnterButton>
+        </HeroContentWrapper>
+        <HeroGodsImgWrapper>
+          <Image
+            src="/images/hero-gods.png"
+            alt="hero"
+            layout="fill"
+            objectFit="contain"
+          />
+        </HeroGodsImgWrapper>
       </HeroWrapper>
+      <MoreLoreWrapper>
+        <BorderDivider>
+          <Image
+            src="/images/black-brush.svg"
+            alt="divider"
+            height={582}
+            width={1088}
+            layout="responsive"
+          />
+        </BorderDivider>
+      </MoreLoreWrapper>
     </Wrapper>
   )
 }

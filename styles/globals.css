@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Iceberg&display=swap");
-@font-face {
-  font-family: heater;
-  src: url(./Heaters.otf);
-}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -40,7 +37,7 @@ html:focus-within {
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
+  /* line-height: 1.5; */
 }
 
 /* A elements that don't have a class get default styles */
