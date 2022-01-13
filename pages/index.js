@@ -74,13 +74,79 @@ const BorderDivider = styled.div`
   width: 100%;
   height: 100%;
   position: absolute;
-  top: -30px;
+  top: ${({ top }) => (top ? "-350px" : "0px")};
+  z-index: 1;
 `
 
 const MoreLoreWrapper = styled.div`
   height: 500px;
   position: relative;
-  background-color: black;
+  background-image: url("/images/black-brush.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: grid;
+  place-items: center;
+`
+
+const OminiaAccordWrapper = styled.div`
+  height: 500px;
+  width: 100%;
+  position: relative;
+  background-image: url("/images/grit.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: grid;
+  place-items: center;
+  background-color: ${theme.grey};
+`
+
+const MoreLoreCardsWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  z-index: 3;
+  gap: 3rem;
+`
+
+const MoreLoreCard = styled.div`
+  position: relative;
+  padding: 1rem;
+  width: 250px;
+  height: 300px;
+  border: 1px solid ${theme.white};
+  color: ${theme.white};
+  font-size: 2.5rem;
+  word-spacing: unset;
+  display: table-caption;
+  transition: all 0.1s ease-in;
+  cursor: pointer;
+
+  &:nth-child(1) {
+    background-color: ${Color(theme.red).alpha(0.12)};
+  }
+
+  &:nth-child(2) {
+    background-color: ${Color(theme.yellow).alpha(0.12)};
+  }
+
+  &:nth-child(3) {
+    background-color: ${Color(theme.purple).alpha(0.2)};
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  p {
+    word-spacing: 100vw;
+  }
+
+  span {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+  }
 `
 
 export default function Home() {
@@ -116,6 +182,29 @@ export default function Home() {
         </HeroGodsImgWrapper>
       </HeroWrapper>
       <MoreLoreWrapper>
+        <BorderDivider top>
+          <Image
+            src="/images/black-brush.svg"
+            alt="divider"
+            height={582}
+            width={1088}
+            layout="responsive"
+          />
+        </BorderDivider>
+        <MoreLoreCardsWrapper>
+          <MoreLoreCard>
+            <p>The Imprisoned Deities</p>
+            <span>{">"}</span>
+          </MoreLoreCard>
+          <MoreLoreCard>
+            <p>Infernals Uprising</p>
+            <span>{">"}</span>
+          </MoreLoreCard>
+          <MoreLoreCard>
+            <p>The Great Omniwar</p>
+            <span>{">"}</span>
+          </MoreLoreCard>
+        </MoreLoreCardsWrapper>
         <BorderDivider>
           <Image
             src="/images/black-brush.svg"
@@ -125,6 +214,7 @@ export default function Home() {
             layout="responsive"
           />
         </BorderDivider>
+        <OminiaAccordWrapper />
       </MoreLoreWrapper>
     </Wrapper>
   )
