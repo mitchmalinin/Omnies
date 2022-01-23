@@ -21,7 +21,7 @@ export const SectionTitle = styled.h2`
   }
 
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     &:before {
       ${({ textAlignEnd }) =>
         textAlignEnd ? "right: -9.1rem" : "left: -9.1rem"};
@@ -44,3 +44,5 @@ export const MoreButton = styled.button`
     transform: scale(1.05);
   }
 `
+
+export const ContentWrapper = styled.div``
