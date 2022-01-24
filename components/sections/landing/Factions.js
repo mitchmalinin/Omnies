@@ -1,7 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 import { theme } from "../../palette"
-import { SectionTitle, MoreButton } from "../../layout/SharedComponents"
+import {
+  SectionTitle,
+  MoreButton,
+  ContentWrapper,
+} from "../../layout/SharedComponents"
 import Image from "next/image"
 import Color from "color"
 
@@ -97,102 +101,105 @@ const LeaderImgWrapper = styled.div`
 
 const Factions = () => {
   return (
-    <FactionsWrapper>
-      <SectionTitle textAlignEnd>The Four Factions</SectionTitle>
-      <LeaderCard>
-        <LeaderImgWrapper>
-          <Image
-            src="/images/heroics.png"
-            alt="heroics"
-            height="100%"
-            width="100%"
-            layout="responsive"
-            // objectFit="contain"
-          />
-          <div className="img-border" />
-        </LeaderImgWrapper>
-        <LeaderCardDesc textColor="yellow" imgLeft>
-          <h3>Heroics</h3>
-          <p>
-            The Heroics descend from Mt. Omnia high in the sky. True of heart
-            and possessing extreme strength, flight and the power to control
-            lightning the Heroics came to the Atlins and Mystics aid during the
-            Great Omniwar to push back the Infernals.{" "}
-          </p>
-          {/* <MoreButton backgroundColor="yellow">More</MoreButton> */}
-        </LeaderCardDesc>
-      </LeaderCard>
-      <LeaderCard mobileReverse>
-        <LeaderCardDesc textColor="red">
-          <h3>Infernals</h3>
-          <p>
-            The Infernals are a crude race with a fierce desire to rule Omnia
-            and enslave the other. Possessing extreme strength and the power to
-            control fire and earth the Infernals initiated the Great Omniwar.
-            After 100 years of fighting the Infernals were vanquished into the
-            forgotten realm 10,000 years ago following the Great Omniwar.
-          </p>
-          {/* <MoreButton backgroundColor="red">More</MoreButton> */}
-        </LeaderCardDesc>
-        <LeaderImgWrapper>
-          <Image
-            src="/images/infernals.png"
-            alt="infernals"
-            height="100%"
-            width="100%"
-            layout="responsive"
-            // objectFit="contain"
-          />
-          <div className="img-border" />
-        </LeaderImgWrapper>
-      </LeaderCard>
-      <LeaderCard>
-        <LeaderImgWrapper>
-          <Image
-            src="/images/atlins.png"
-            alt="atlins"
-            height="100%"
-            width="100%"
-            layout="responsive"
-            // objectFit="contain"
-          />
-          <div className="img-border" />
-        </LeaderImgWrapper>
-        <LeaderCardDesc textColor="teal" imgLeft>
-          <h3>Atlins</h3>
-          <p>
-            The Atlins control the oceans and come from 10,000 leagues below the
-            surface. With the power of the sea and all it’s creatures and
-            extreme strength the Atlins abilities were crucial in pushing the
-            Infernals back into the Forgotten Realm.
-          </p>
-          {/* <MoreButton backgroundColor="teal">More</MoreButton> */}
-        </LeaderCardDesc>
-      </LeaderCard>
-      <LeaderCard mobileReverse>
-        <LeaderCardDesc textColor="purple">
-          <h3>Mystics</h3>
-          <p>
-            The Mystics are a race of few words with the power of magic lived.
-            They are a very powerful yet peaceful race that lives deep in the
-            enchanted forest, a realm near impossible to reach without the use
-            of magic.
-          </p>
-          {/* <MoreButton backgroundColor="purple">More</MoreButton> */}
-        </LeaderCardDesc>
-        <LeaderImgWrapper>
-          <Image
-            src="/images/mystics.png"
-            alt="mystics"
-            height="100%"
-            width="100%"
-            layout="responsive"
-            // objectFit="contain"
-          />
-          <div className="img-border" />
-        </LeaderImgWrapper>
-      </LeaderCard>
-    </FactionsWrapper>
+    <ContentWrapper backgroundColor="grey">
+      <FactionsWrapper>
+        <SectionTitle textAlignEnd>The Four Factions</SectionTitle>
+        <LeaderCard>
+          <LeaderImgWrapper>
+            <Image
+              src="/images/heroics.png"
+              alt="heroics"
+              height="100%"
+              width="100%"
+              layout="responsive"
+              // objectFit="contain"
+            />
+            <div className="img-border" />
+          </LeaderImgWrapper>
+          <LeaderCardDesc textColor="yellow" imgLeft>
+            <h3>Heroics</h3>
+            <p>
+              The Heroics descend from Mt. Omnia high in the sky. True of heart
+              and possessing extreme strength, flight and the power to control
+              lightning the Heroics came to the Atlins and Mystics aid during
+              the Great Omniwar to push back the Infernals.{" "}
+            </p>
+            {/* <MoreButton backgroundColor="yellow">More</MoreButton> */}
+          </LeaderCardDesc>
+        </LeaderCard>
+        <LeaderCard mobileReverse>
+          <LeaderCardDesc textColor="red">
+            <h3>Infernals</h3>
+            <p>
+              The Infernals are a crude race with a fierce desire to rule Omnia
+              and enslave the other. Possessing extreme strength and the power
+              to control fire and earth the Infernals initiated the Great
+              Omniwar. After 100 years of fighting the Infernals were vanquished
+              into the forgotten realm 10,000 years ago following the Great
+              Omniwar.
+            </p>
+            {/* <MoreButton backgroundColor="red">More</MoreButton> */}
+          </LeaderCardDesc>
+          <LeaderImgWrapper>
+            <Image
+              src="/images/infernals.png"
+              alt="infernals"
+              height="100%"
+              width="100%"
+              layout="responsive"
+              // objectFit="contain"
+            />
+            <div className="img-border" />
+          </LeaderImgWrapper>
+        </LeaderCard>
+        <LeaderCard>
+          <LeaderImgWrapper>
+            <Image
+              src="/images/atlins.png"
+              alt="atlins"
+              height="100%"
+              width="100%"
+              layout="responsive"
+              // objectFit="contain"
+            />
+            <div className="img-border" />
+          </LeaderImgWrapper>
+          <LeaderCardDesc textColor="teal" imgLeft>
+            <h3>Atlins</h3>
+            <p>
+              The Atlins control the oceans and come from 10,000 leagues below
+              the surface. With the power of the sea and all it’s creatures and
+              extreme strength the Atlins abilities were crucial in pushing the
+              Infernals back into the Forgotten Realm.
+            </p>
+            {/* <MoreButton backgroundColor="teal">More</MoreButton> */}
+          </LeaderCardDesc>
+        </LeaderCard>
+        <LeaderCard mobileReverse>
+          <LeaderCardDesc textColor="purple">
+            <h3>Mystics</h3>
+            <p>
+              The Mystics are a race of few words with the power of magic lived.
+              They are a very powerful yet peaceful race that lives deep in the
+              enchanted forest, a realm near impossible to reach without the use
+              of magic.
+            </p>
+            {/* <MoreButton backgroundColor="purple">More</MoreButton> */}
+          </LeaderCardDesc>
+          <LeaderImgWrapper>
+            <Image
+              src="/images/mystics.png"
+              alt="mystics"
+              height="100%"
+              width="100%"
+              layout="responsive"
+              // objectFit="contain"
+            />
+            <div className="img-border" />
+          </LeaderImgWrapper>
+        </LeaderCard>
+      </FactionsWrapper>
+    </ContentWrapper>
   )
 }
 

@@ -45,4 +45,9 @@ export const MoreButton = styled.button`
   }
 `
 
-export const ContentWrapper = styled.div``
+export const ContentWrapper = styled.div`
+  width: 100%;
+  background-color: ${({ backgroundColor }) => theme[backgroundColor]};
+  display: grid;
+  place-items: center;
+`

@@ -1,5 +1,9 @@
 import React from "react"
-import { SectionTitle, MoreButton } from "../../layout/SharedComponents"
+import {
+  SectionTitle,
+  MoreButton,
+  ContentWrapper,
+} from "../../layout/SharedComponents"
 import styled from "styled-components"
 import { theme } from "../../palette"
 import { teamMembers } from "../../utils/staticData"
@@ -63,36 +67,38 @@ const MemberRoleWrapper = styled.p`
 
 const Team = () => {
   return (
-    <Wrapper>
-      <SectionTitle id="team" textAlignEnd>
-        The Council
-      </SectionTitle>
-      <TeamMembersWrapper>
-        {teamMembers.map((member) => {
-          return (
-            <TeamMember key={member.name}>
-              <TeamMemberImgWrapper>
-                <Image
-                  src={member.img}
-                  alt="member-img"
-                  height="100%"
-                  width="100%"
-                  layout="responsive"
-                  // objectFit="contain"
-                />
-              </TeamMemberImgWrapper>
-              <TeamMemberNameWrapper>
-                <p>{member.name}</p>
-                <a href={member.twitter} target="_blank" rel="noreferrer">
-                  <i className="fab fa-twitter"></i>
-                </a>
-              </TeamMemberNameWrapper>
-              <MemberRoleWrapper>{member.role}</MemberRoleWrapper>
-            </TeamMember>
-          )
-        })}
-      </TeamMembersWrapper>
-    </Wrapper>
+    <ContentWrapper backgroundColor="lightGrey">
+      <Wrapper>
+        <SectionTitle id="team" textAlignEnd>
+          The Council
+        </SectionTitle>
+        <TeamMembersWrapper>
+          {teamMembers.map((member) => {
+            return (
+              <TeamMember key={member.name}>
+                <TeamMemberImgWrapper>
+                  <Image
+                    src={member.img}
+                    alt="member-img"
+                    height="100%"
+                    width="100%"
+                    layout="responsive"
+                    // objectFit="contain"
+                  />
+                </TeamMemberImgWrapper>
+                <TeamMemberNameWrapper>
+                  <p>{member.name}</p>
+                  <a href={member.twitter} target="_blank" rel="noreferrer">
+                    <i className="fab fa-twitter"></i>
+                  </a>
+                </TeamMemberNameWrapper>
+                <MemberRoleWrapper>{member.role}</MemberRoleWrapper>
+              </TeamMember>
+            )
+          })}
+        </TeamMembersWrapper>
+      </Wrapper>{" "}
+    </ContentWrapper>
   )
 }
 

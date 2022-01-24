@@ -1,7 +1,11 @@
 import React from "react"
 import { theme } from "../../palette"
 import styled from "styled-components"
-import { SectionTitle, MoreButton } from "../../layout/SharedComponents"
+import {
+  SectionTitle,
+  MoreButton,
+  ContentWrapper,
+} from "../../layout/SharedComponents"
 
 const AccordWrapper = styled.div`
   display: grid;
@@ -32,16 +36,18 @@ const AccordDesc = styled.div`
 
 const Accord = () => {
   return (
-    <AccordWrapper>
-      <SectionTitle id="about">The Omnia Accord</SectionTitle>
-      <AccordDesc>
-        During the Great Omniwar each faction elected a leader to lead their
-        armies. Following the vanquishing of the Infernals to the Forgotten
-        Realm the Leaders of the other 3 Factions met at what came to be known
-        as ‘The Omnia Accord.’
-      </AccordDesc>
-      {/* <MoreButton backgroundColor="red">More</MoreButton> */}
-    </AccordWrapper>
+    <ContentWrapper backgroundColor="lightGrey">
+      <AccordWrapper>
+        <SectionTitle id="about">The Omnia Accord</SectionTitle>
+        <AccordDesc>
+          During the Great Omniwar each faction elected a leader to lead their
+          armies. Following the vanquishing of the Infernals to the Forgotten
+          Realm the Leaders of the other 3 Factions met at what came to be known
+          as ‘The Omnia Accord.’
+        </AccordDesc>
+        {/* <MoreButton backgroundColor="red">More</MoreButton> */}
+      </AccordWrapper>
+    </ContentWrapper>
   )
 }
 

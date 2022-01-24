@@ -8,7 +8,10 @@ import Factions from "../components/sections/landing/Factions"
 import MoreLore from "../components/sections/landing/MoreLore"
 import Accord from "../components/sections/landing/Accord"
 import Team from "../components/sections/landing/Team"
-import { SectionTitle } from "../components/layout/SharedComponents"
+import {
+  SectionTitle,
+  ContentWrapper,
+} from "../components/layout/SharedComponents"
 
 const Wrapper = styled.div`
   /* background-image: url("../images/test-texture.png"); */
@@ -255,22 +258,24 @@ export default function Home() {
       <Factions />
       <Team />
       <Roadmap />
-      <Socials>
-        <SectionTitle id="socials" textAlignEnd>
-          Socials
-        </SectionTitle>
-        <SocialsContentWrapper>
-          <p>Need a cool slogan here</p>
-          <SocialsWrapper>
-            <SocialIconWrapper>
-              <i className="fab fa-discord"></i>
-            </SocialIconWrapper>
-            <SocialIconWrapper>
-              <i className="fab fa-twitter"></i>
-            </SocialIconWrapper>
-          </SocialsWrapper>
-        </SocialsContentWrapper>
-      </Socials>
+      <ContentWrapper backgroundColor="lightGrey">
+        <Socials>
+          <SectionTitle id="socials" textAlignEnd>
+            Socials
+          </SectionTitle>
+          <SocialsContentWrapper>
+            <p>Need a cool slogan here</p>
+            <SocialsWrapper>
+              <SocialIconWrapper>
+                <i className="fab fa-discord"></i>
+              </SocialIconWrapper>
+              <SocialIconWrapper>
+                <i className="fab fa-twitter"></i>
+              </SocialIconWrapper>
+            </SocialsWrapper>
+          </SocialsContentWrapper>
+        </Socials>{" "}
+      </ContentWrapper>
       <Footer>© 2021 OMNIES. ALL RIGHTS RESERVED.</Footer>
     </Wrapper>
   )

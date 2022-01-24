@@ -1,7 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 import { theme } from "../../palette"
-import { SectionTitle, MoreButton } from "../../layout/SharedComponents"
+import {
+  SectionTitle,
+  MoreButton,
+  ContentWrapper,
+} from "../../layout/SharedComponents"
 
 const RoadmapWrapper = styled.div`
   width: 100%;
@@ -59,98 +63,101 @@ const RoadMapItem = styled.div`
 
 const Roadmap = () => {
   return (
-    <RoadmapWrapper>
-      <SectionTitle id="roadmap">Roadmap</SectionTitle>
-      <RoadmapContentWrapper>
-        <RoadMapItem>
-          <h2>Phase 1</h2>
-          {/* <h3>Feburary 2021.</h3> */}
-          <p>
-            Launch of 200 Genesis Omnies - Each Genesis Omnie will earn three
-            Deities and three Weapons air dropped during later Phases
-            <ul>
-              <li>50 Mystics</li>
-              <li>50 Heroics</li>
-              <li>50 Infernals</li>
-              <li>50 Atlins</li>
-            </ul>
-          </p>
-        </RoadMapItem>
-        <RoadMapItem>
-          <h2>Phase 2</h2>
-          {/* {/* <h3>March 2021.</h3> */}
-          <p>
-            Launch of 8,888 Generative Omnies - Each Generative Omnie will earn
-            one Deitie and one Weapon air dropped
-            <ul>
-              <li>2,222 Mystics</li>
-              <li>2,222 Heroics</li>
-              <li>2,222 Infernals</li>
-              <li>2,222 Atlins</li>
-            </ul>
-          </p>
-        </RoadMapItem>
-        <RoadMapItem>
-          <h2>Phase 3</h2>
-          {/* {/* <h3>April 2021.</h3> */}
-          <p>
-            Rare Giveaway to a select few Omnimpians deemed worthy of control by
-            the Forger
-          </p>
-        </RoadMapItem>
-        <RoadMapItem>
-          <h2>Phase 4</h2>
-          {/* {/* <h3>May 2021.</h3> */}
-          <p>
-            Auctions of special items/NFTs, proceeds will go towards Omnia
-            buildout in NFT Worlds
-          </p>
-        </RoadMapItem>
-        <RoadMapItem>
-          <h2>Phase 5</h2>
-          {/* <h3>June 2021.</h3> */}
-          <p>Omnie Avatar integration into metaverse</p>
-        </RoadMapItem>
-        <RoadMapItem>
-          <h2>Phase 6</h2>
-          {/* <h3>June 2021.</h3> */}
-          <p>
-            Airdrop of Weapons to be used in the Metaverse
-            <ul>
-              <li>3 Weapons air dropped per Genesis Omnie</li>
-              <li>1 Weapon air dropped per Generative Omnie</li>
-            </ul>
-          </p>
-        </RoadMapItem>
-        <RoadMapItem>
-          <h2>Phase 7</h2>
-          {/* <h3>June 2021.</h3> */}
-          <p>
-            Launch of The Omnia Store to facilitate the sale of merchandise and
-            weapons and accessories to be used in NFT Lands
-          </p>
-        </RoadMapItem>
-        <RoadMapItem>
-          <h2>Phase 8</h2>
-          {/* <h3>June 2021.</h3> */}
-          <p>
-            NFT Worlds metaverse buildout of the four realms of Omnia (Enchanted
-            Forest, The Mainland, The Forgotten Realm, The Trenches)
-          </p>
-        </RoadMapItem>
-        <RoadMapItem>
-          <h2>Phase 9</h2>
-          {/* <h3>June 2021.</h3> */}
-          <p>
-            Airdrop of Deities for Omnipians
-            <ul>
-              <li>3 Deities per Genesis Omnie</li>
-              <li>1 Deitie per Generative Omnie</li>
-            </ul>
-          </p>
-        </RoadMapItem>
-      </RoadmapContentWrapper>
-    </RoadmapWrapper>
+    <ContentWrapper backgroundColor="grey">
+      <RoadmapWrapper>
+        <SectionTitle id="roadmap">Roadmap</SectionTitle>
+        <RoadmapContentWrapper>
+          <RoadMapItem>
+            <h2>Phase 1</h2>
+            {/* <h3>Feburary 2021.</h3> */}
+            <p>
+              Launch of 200 Genesis Omnies - Each Genesis Omnie will earn three
+              Deities and three Weapons air dropped during later Phases
+              <ul>
+                <li>50 Mystics</li>
+                <li>50 Heroics</li>
+                <li>50 Infernals</li>
+                <li>50 Atlins</li>
+              </ul>
+            </p>
+          </RoadMapItem>
+          <RoadMapItem>
+            <h2>Phase 2</h2>
+            {/* {/* <h3>March 2021.</h3> */}
+            <p>
+              Launch of 8,888 Generative Omnies - Each Generative Omnie will
+              earn one Deitie and one Weapon air dropped
+              <ul>
+                <li>2,222 Mystics</li>
+                <li>2,222 Heroics</li>
+                <li>2,222 Infernals</li>
+                <li>2,222 Atlins</li>
+              </ul>
+            </p>
+          </RoadMapItem>
+          <RoadMapItem>
+            <h2>Phase 3</h2>
+            {/* {/* <h3>April 2021.</h3> */}
+            <p>
+              Rare Giveaway to a select few Omnimpians deemed worthy of control
+              by the Forger
+            </p>
+          </RoadMapItem>
+          <RoadMapItem>
+            <h2>Phase 4</h2>
+            {/* {/* <h3>May 2021.</h3> */}
+            <p>
+              Auctions of special items/NFTs, proceeds will go towards Omnia
+              buildout in NFT Worlds
+            </p>
+          </RoadMapItem>
+          <RoadMapItem>
+            <h2>Phase 5</h2>
+            {/* <h3>June 2021.</h3> */}
+            <p>Omnie Avatar integration into metaverse</p>
+          </RoadMapItem>
+          <RoadMapItem>
+            <h2>Phase 6</h2>
+            {/* <h3>June 2021.</h3> */}
+            <p>
+              Airdrop of Weapons to be used in the Metaverse
+              <ul>
+                <li>3 Weapons air dropped per Genesis Omnie</li>
+                <li>1 Weapon air dropped per Generative Omnie</li>
+              </ul>
+            </p>
+          </RoadMapItem>
+          <RoadMapItem>
+            <h2>Phase 7</h2>
+            {/* <h3>June 2021.</h3> */}
+            <p>
+              Launch of The Omnia Store to facilitate the sale of merchandise
+              and weapons and accessories to be used in NFT Lands
+            </p>
+          </RoadMapItem>
+          <RoadMapItem>
+            <h2>Phase 8</h2>
+            {/* <h3>June 2021.</h3> */}
+            <p>
+              NFT Worlds metaverse buildout of the four realms of Omnia
+              (Enchanted Forest, The Mainland, The Forgotten Realm, The
+              Trenches)
+            </p>
+          </RoadMapItem>
+          <RoadMapItem>
+            <h2>Phase 9</h2>
+            {/* <h3>June 2021.</h3> */}
+            <p>
+              Airdrop of Deities for Omnipians
+              <ul>
+                <li>3 Deities per Genesis Omnie</li>
+                <li>1 Deitie per Generative Omnie</li>
+              </ul>
+            </p>
+          </RoadMapItem>
+        </RoadmapContentWrapper>
+      </RoadmapWrapper>
+    </ContentWrapper>
   )
 }
 
