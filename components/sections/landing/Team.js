@@ -7,7 +7,6 @@ import {
 import styled from "styled-components"
 import { theme } from "../../palette"
 import { teamMembers } from "../../utils/staticData"
-import Image from "next/image"
 
 const Wrapper = styled.div`
   width: 100%;
@@ -37,9 +36,10 @@ const TeamMembersWrapper = styled.div`
 `
 
 const TeamMemberImgWrapper = styled.div`
-  /* min-width: 300px; */
-  height: 100%;
-  border: 1px solid ${theme.white};
+  img {
+    border: 1px solid ${theme.white};
+    width: 100%;
+  }
 `
 
 const TeamMemberNameWrapper = styled.div`
@@ -77,14 +77,7 @@ const Team = () => {
             return (
               <TeamMember key={member.name}>
                 <TeamMemberImgWrapper>
-                  <Image
-                    src={member.img}
-                    alt="member-img"
-                    height="100%"
-                    width="100%"
-                    layout="responsive"
-                    // objectFit="contain"
-                  />
+                  <img src={member.img} />
                 </TeamMemberImgWrapper>
                 <TeamMemberNameWrapper>
                   <p>{member.name}</p>

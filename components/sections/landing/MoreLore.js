@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import { theme } from "../../palette"
 import Color from "color"
-import Image from "next/image"
 
 const BorderDivider = styled.img`
   position: absolute;

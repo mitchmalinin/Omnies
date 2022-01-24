@@ -6,7 +6,6 @@ import {
   MoreButton,
   ContentWrapper,
 } from "../../layout/SharedComponents"
-import Image from "next/image"
 import Color from "color"
 
 const FactionsWrapper = styled.div`
@@ -78,15 +77,16 @@ const LeaderImgWrapper = styled.div`
 
   img {
     z-index: 10;
+    width: 100%;
 
-    &:after {
-      content: "" !important;
-      height: 100% !important; //You can change this if you want smaller/bigger borders
-      width: 1px !important;
-      position: absolute !important;
-      right: 0 !important;
-      top: 0 !important;
-      background-color: ${theme.white} !important;
+    &:before {
+      content: "";
+      height: 100%; //You can change this if you want smaller/bigger borders
+      width: 1px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-color: ${theme.white};
     }
   }
 
@@ -106,14 +106,7 @@ const Factions = () => {
         <SectionTitle textAlignEnd>The Four Factions</SectionTitle>
         <LeaderCard>
           <LeaderImgWrapper>
-            <Image
-              src="/images/heroics.png"
-              alt="heroics"
-              height="100%"
-              width="100%"
-              layout="responsive"
-              // objectFit="contain"
-            />
+            <img src="/images/heroics.png" />
             <div className="img-border" />
           </LeaderImgWrapper>
           <LeaderCardDesc textColor="yellow" imgLeft>
@@ -141,27 +134,12 @@ const Factions = () => {
             {/* <MoreButton backgroundColor="red">More</MoreButton> */}
           </LeaderCardDesc>
           <LeaderImgWrapper>
-            <Image
-              src="/images/infernals.png"
-              alt="infernals"
-              height="100%"
-              width="100%"
-              layout="responsive"
-              // objectFit="contain"
-            />
-            <div className="img-border" />
+            <img src="/images/infernals.png" />
           </LeaderImgWrapper>
         </LeaderCard>
         <LeaderCard>
           <LeaderImgWrapper>
-            <Image
-              src="/images/atlins.png"
-              alt="atlins"
-              height="100%"
-              width="100%"
-              layout="responsive"
-              // objectFit="contain"
-            />
+            <img src="/images/atlins.png" />
             <div className="img-border" />
           </LeaderImgWrapper>
           <LeaderCardDesc textColor="teal" imgLeft>
@@ -187,14 +165,7 @@ const Factions = () => {
             {/* <MoreButton backgroundColor="purple">More</MoreButton> */}
           </LeaderCardDesc>
           <LeaderImgWrapper>
-            <Image
-              src="/images/mystics.png"
-              alt="mystics"
-              height="100%"
-              width="100%"
-              layout="responsive"
-              // objectFit="contain"
-            />
+            <img src="/images/mystics.png" />
             <div className="img-border" />
           </LeaderImgWrapper>
         </LeaderCard>

@@ -1,7 +1,6 @@
 import Head from "next/head"
 import styled from "styled-components"
 import { theme } from "../components/palette"
-import Image from "next/image"
 import Color from "color"
 import Roadmap from "../components/sections/landing/Roadmap"
 import Factions from "../components/sections/landing/Factions"
