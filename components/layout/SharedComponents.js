@@ -4,7 +4,7 @@ import Color from "color"
 
 export const SectionTitle = styled.h2`
   font-size: 3rem;
-  color: ${theme.white};
+  color: ${theme.yellow};
   z-index: 4;
   position: relative;
   text-align: ${({ textAlignEnd }) => (textAlignEnd ? "end" : "start")};
@@ -14,7 +14,7 @@ export const SectionTitle = styled.h2`
     display: block;
     width: 130px;
     height: 3px;
-    background: ${theme.white};
+    background: ${theme.yellow};
     ${({ textAlignEnd }) => (textAlignEnd ? "right: -10rem" : "left: -10rem")};
     top: 50%;
     position: absolute;
@@ -30,18 +30,18 @@ export const SectionTitle = styled.h2`
 `
 
 export const MoreButton = styled.button`
-  border: 1px solid ${theme.white};
+  border: 1.5px solid ${({ backgroundColor }) => theme[backgroundColor]};
   background: ${({ backgroundColor }) =>
     Color(theme[backgroundColor]).alpha(0.12)};
   padding: 0.5em 2em;
   font-size: 1.25rem;
   width: max-content;
   color: ${theme.white};
-  transition: all 0.1s ease-in;
+  transition: all 0.2s ease-in;
   cursor: pointer;
 
   &:hover {
-    transform: scale(1.05);
+    background: ${({ backgroundColor }) => theme[backgroundColor]};
   }
 `
 

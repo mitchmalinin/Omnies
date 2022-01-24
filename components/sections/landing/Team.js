@@ -7,10 +7,13 @@ import Image from "next/image"
 
 const Wrapper = styled.div`
   width: 100%;
+  display: grid;
+  grid-auto-rows: min-content;
   padding: 5rem 5.5rem;
   max-width: 1500px;
+  align-self: center;
   overflow-x: hidden;
-
+  background: ${theme.lightGrey};
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     padding: 0 2.5rem;
     margin-top: 5rem;
@@ -80,8 +83,8 @@ const Team = () => {
               </TeamMemberImgWrapper>
               <TeamMemberNameWrapper>
                 <p>{member.name}</p>
-                <a href={member.twitter} target="_blank">
-                  <i class="fab fa-twitter"></i>
+                <a href={member.twitter} target="_blank" rel="noreferrer">
+                  <i className="fab fa-twitter"></i>
                 </a>
               </TeamMemberNameWrapper>
               <MemberRoleWrapper>{member.role}</MemberRoleWrapper>

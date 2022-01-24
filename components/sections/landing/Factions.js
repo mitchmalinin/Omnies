@@ -6,12 +6,11 @@ import Image from "next/image"
 import Color from "color"
 
 const FactionsWrapper = styled.div`
-  margin-top: 5rem;
   width: 100%;
   display: grid;
   grid-auto-rows: min-content;
   gap: 5rem;
-
+  background-color: ${theme.grey};
   padding: 5rem 5.5rem;
 
   max-width: 1500px;
@@ -120,7 +119,7 @@ const Factions = () => {
             lightning the Heroics came to the Atlins and Mystics aid during the
             Great Omniwar to push back the Infernals.{" "}
           </p>
-          <MoreButton backgroundColor="yellow">More</MoreButton>
+          {/* <MoreButton backgroundColor="yellow">More</MoreButton> */}
         </LeaderCardDesc>
       </LeaderCard>
       <LeaderCard mobileReverse>
@@ -133,7 +132,7 @@ const Factions = () => {
             After 100 years of fighting the Infernals were vanquished into the
             forgotten realm 10,000 years ago following the Great Omniwar.
           </p>
-          <MoreButton backgroundColor="red">More</MoreButton>
+          {/* <MoreButton backgroundColor="red">More</MoreButton> */}
         </LeaderCardDesc>
         <LeaderImgWrapper>
           <Image
@@ -167,7 +166,7 @@ const Factions = () => {
             extreme strength the Atlins abilities were crucial in pushing the
             Infernals back into the Forgotten Realm.
           </p>
-          <MoreButton backgroundColor="teal">More</MoreButton>
+          {/* <MoreButton backgroundColor="teal">More</MoreButton> */}
         </LeaderCardDesc>
       </LeaderCard>
       <LeaderCard mobileReverse>
@@ -179,7 +178,7 @@ const Factions = () => {
             enchanted forest, a realm near impossible to reach without the use
             of magic.
           </p>
-          <MoreButton backgroundColor="purple">More</MoreButton>
+          {/* <MoreButton backgroundColor="purple">More</MoreButton> */}
         </LeaderCardDesc>
         <LeaderImgWrapper>
           <Image

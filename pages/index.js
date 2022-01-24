@@ -8,13 +8,11 @@ import Factions from "../components/sections/landing/Factions"
 import MoreLore from "../components/sections/landing/MoreLore"
 import Accord from "../components/sections/landing/Accord"
 import Team from "../components/sections/landing/Team"
+import { SectionTitle } from "../components/layout/SharedComponents"
 
 const Wrapper = styled.div`
-  background-image: url("../images/texture2.svg");
-  background-size: contain;
-  background-repeat: repeat;
-  background-position: center;
-  background-color: ${theme.grey};
+  /* background-image: url("../images/test-texture.png"); */
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,9 +22,13 @@ const HeroWrapper = styled.div`
   height: 100vh;
   color: ${theme.white};
   position: relative;
-  background-image: url("../images/background.png");
+  background-image: url("../images/hero-desktop.png");
   background-size: cover;
   background-position: center;
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    background-image: url("../images/hero-mobile.png");
+  }
 `
 
 const NavWrapper = styled.nav`
@@ -86,6 +88,10 @@ const HeroTitle = styled.h1`
 const HeroSubtitle = styled.h2`
   font-size: 3rem;
   margin-bottom: 7.25rem;
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    font-size: 2rem;
+  }
 `
 
 const EnterButton = styled.button`
@@ -107,13 +113,94 @@ const HeroGodsImgWrapper = styled.div`
 `
 
 const Footer = styled.div`
-  margin-top: 10rem;
+  padding: 10rem 0 4rem 0;
   height: 100px;
   width: 100%;
   display: grid;
   place-items: center;
-  background-color: ${theme.grey};
+  background-color: ${theme.lightGrey};
+  color: ${theme.silver};
+`
+
+const SocialIconWrapper = styled.div`
+  display: grid;
+  place-items: center;
+  width: 4rem;
+  height: 4rem;
+  font-size: 1.5rem;
+  position: relative;
   color: ${theme.white};
+  cursor: pointer;
+
+  i {
+    z-index: 999;
+  }
+
+  &:before {
+    content: "";
+    background-color: ${Color(theme.yellow).alpha(0.12)};
+    border: 1px solid ${theme.yellow};
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s ease-in;
+    transform: rotate(45deg);
+  }
+
+  &:hover:before {
+    background-color: ${theme.yellow};
+  }
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    font-size: 1.2rem;
+    width: 3rem;
+    height: 3rem;
+  }
+`
+const SocialsWrapper = styled.div`
+  display: grid;
+  grid-template-columns: min-content min-content;
+  gap: 3rem;
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    margin-top: 3rem;
+  }
+`
+const Socials = styled.div`
+  overflow: hidden;
+  width: 100%;
+  display: grid;
+  grid-auto-rows: min-content;
+  padding: 5rem 5.5rem;
+  max-width: 1500px;
+  align-self: center;
+  overflow-x: hidden;
+  background-color: ${theme.lightGrey};
+  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    padding: 0 2.5rem;
+    margin-top: 5rem;
+  }
+`
+
+const SocialsContentWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 5rem;
+
+  p {
+    font-size: 2.5rem;
+    color: ${theme.white};
+  }
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    flex-direction: column;
+    padding-bottom: 2rem;
+
+    p {
+      font-size: 1.5rem;
+    }
+  }
 `
 
 export default function Home() {
@@ -127,7 +214,7 @@ export default function Home() {
           rel="stylesheet"
           href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
           integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-          crossorigin="anonymous"
+          crossOrigin="anonymous"
         ></link>
       </Head>
       <HeroWrapper>
@@ -143,7 +230,9 @@ export default function Home() {
             <a href="#roadmap">
               <NavItem>ROADMAP</NavItem>
             </a>
-            <NavItem>SOCIALS</NavItem>
+            <a href="#socials">
+              <NavItem>SOCIALS</NavItem>
+            </a>
           </NavItemsWrapper>
         </NavWrapper>
         <HeroContentWrapper>
@@ -166,7 +255,23 @@ export default function Home() {
       <Factions />
       <Team />
       <Roadmap />
-      <Footer>Omnies</Footer>
+      <Socials>
+        <SectionTitle id="socials" textAlignEnd>
+          Socials
+        </SectionTitle>
+        <SocialsContentWrapper>
+          <p>Need a cool slogan here</p>
+          <SocialsWrapper>
+            <SocialIconWrapper>
+              <i className="fab fa-discord"></i>
+            </SocialIconWrapper>
+            <SocialIconWrapper>
+              <i className="fab fa-twitter"></i>
+            </SocialIconWrapper>
+          </SocialsWrapper>
+        </SocialsContentWrapper>
+      </Socials>
+      <Footer>© 2021 OMNIES. ALL RIGHTS RESERVED.</Footer>
     </Wrapper>
   )
 }

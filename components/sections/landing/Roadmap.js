@@ -4,12 +4,14 @@ import { theme } from "../../palette"
 import { SectionTitle, MoreButton } from "../../layout/SharedComponents"
 
 const RoadmapWrapper = styled.div`
-  text-align: left;
   width: 100%;
-  background-color: ${theme.grey};
+  display: grid;
+  grid-auto-rows: min-content;
   padding: 5rem 5.5rem;
   max-width: 1500px;
-
+  align-self: center;
+  overflow-x: hidden;
+  background-color: ${theme.grey};
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     padding: 0 2.5rem;
     margin-top: 5rem;

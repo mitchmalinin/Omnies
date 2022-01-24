@@ -3,6 +3,8 @@ export const theme = {
   red: "#D62020",
   teal: "#A1FFFF",
   purple: "#AC73E4",
-  grey: "#1F1F1F",
+  grey: "#181816",
   white: "white",
+  lightGrey: "#33322d",
+  silver: "#c2c2c2",
 }
