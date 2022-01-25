@@ -90,7 +90,7 @@ const LeaderImgWrapper = styled.div`
     position: absolute;
     right: -15px;
     bottom: 0;
-    border: 1.5px solid ${({ borderColor }) => theme[borderColor]};
+    border: 3px solid ${({ borderColor }) => theme[borderColor]};
   }
 
   img {
