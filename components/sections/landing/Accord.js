@@ -15,7 +15,7 @@ const AccordWrapper = styled.div`
   z-index: 5;
   gap: 3rem;
   padding: 7rem 5.5rem 7rem 5.5rem;
-  max-width: 1500px;
+  max-width: 1920px;
   align-self: center;
   overflow-x: hidden;
   background-color: ${theme.lightGrey};

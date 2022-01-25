@@ -38,6 +38,7 @@ export const MoreButton = styled.button`
   width: max-content;
   color: ${theme.white};
   transition: all 0.2s ease-in;
+  border-radius: 5px;
   cursor: pointer;
 
   &:hover {

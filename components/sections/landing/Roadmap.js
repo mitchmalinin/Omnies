@@ -12,7 +12,7 @@ const RoadmapWrapper = styled.div`
   display: grid;
   grid-auto-rows: min-content;
   padding: 5rem 5.5rem;
-  max-width: 1500px;
+  max-width: 1920px;
   align-self: center;
   overflow-x: hidden;
   background-color: ${theme.grey};

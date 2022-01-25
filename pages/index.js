@@ -10,6 +10,7 @@ import Team from "../components/sections/landing/Team"
 import {
   SectionTitle,
   ContentWrapper,
+  MoreButton,
 } from "../components/layout/SharedComponents"
 import SocialsIcons from "../components/modules/SocialsIcons"
 
@@ -90,14 +91,20 @@ const HeroContentWrapper = styled.div`
   /* padding: 10rem 0 0 8.5rem; */
   display: grid;
   place-items: center;
-  height: 70%;
+  height: 80%;
+  position: relative;
+`
+const HeroSocials = styled.div`
+  position: absolute;
+  top: 15vh;
+  right: 50px;
 `
 
 const HeroInnerContentWrapper = styled.div`
   display: grid;
   grid-auto-rows: min-content;
   gap: 2rem;
-  text-align: center;
+  justify-items: center;
 `
 
 const HeroTitle = styled.h1`
@@ -116,14 +123,6 @@ const HeroSubtitle = styled.h2`
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     font-size: 2rem;
   }
-`
-
-const EnterButton = styled.button`
-  border: 1px solid ${theme.white};
-  background-color: ${Color(theme.red).alpha(0.2)};
-  color: ${theme.white};
-  padding: 0.5em 2em;
-  font-size: 1.25rem;
 `
 
 const HeroGodsImgWrapper = styled.div`
@@ -152,7 +151,7 @@ const Socials = styled.div`
   display: grid;
   grid-auto-rows: min-content;
   padding: 5rem 5.5rem;
-  max-width: 1500px;
+  max-width: 1920px;
   align-self: center;
   overflow-x: hidden;
   background-color: ${theme.lightGrey};
@@ -216,18 +215,13 @@ export default function Home() {
           <HeroInnerContentWrapper>
             <HeroTitle>Omnia</HeroTitle>
             <HeroSubtitle>REALM OF THE OMNIES</HeroSubtitle>
-            {/* <EnterButton>Enter</EnterButton> */}
+            <MoreButton backgroundColor="red">Enter the Discord</MoreButton>
           </HeroInnerContentWrapper>
+          <HeroSocials>
+            <SocialsIcons row />
+          </HeroSocials>
         </HeroContentWrapper>
-        <HeroGodsImgWrapper>
-          {/* <Image
-            src="/images/header_image/header1.svg"
-            alt="hero"
-            height="100%"
-            width="100%"
-            layout="responsive"
-          /> */}
-        </HeroGodsImgWrapper>
+        <HeroGodsImgWrapper></HeroGodsImgWrapper>
       </HeroWrapper>
       <MoreLore />
       <Accord />

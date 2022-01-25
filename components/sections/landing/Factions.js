@@ -16,7 +16,7 @@ const FactionsWrapper = styled.div`
   background-color: ${theme.grey};
   padding: 5rem 5.5rem;
 
-  max-width: 1500px;
+  max-width: 1920px;
   align-self: center;
   overflow-x: hidden;
   /* background-image: url("https://uploads-ssl.webflow.com/618920e5b4d12352352ee7e3/618eb27e1e47b97dfffcb888_tex-bottom-1.png"),

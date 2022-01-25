@@ -6,9 +6,9 @@ import Color from "color"
 const SocialIconWrapper = styled.div`
   display: grid;
   place-items: center;
-  width: 4rem;
-  height: 4rem;
-  font-size: 1.5rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  font-size: 1.2rem;
   position: relative;
   color: ${theme.white};
   cursor: pointer;
@@ -26,6 +26,7 @@ const SocialIconWrapper = styled.div`
     position: absolute;
     transition: all 0.2s ease-in;
     transform: rotate(45deg);
+    border-radius: 5px;
   }
 
   &:hover:before {

@@ -20,10 +20,17 @@ const MoreLoreWrapper = styled.div`
   background-color: ${theme.grey};
   display: grid;
   place-items: center;
-  gap: 4rem;
   padding: 4rem 5.5rem 9rem 5.5rem;
   justify-items: flex-end;
   overflow: hidden;
+
+  div {
+    max-width: 1920px;
+    display: grid;
+    gap: 4rem;
+    justify-self: center;
+  }
+
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     grid-template-columns: 1fr;
     padding: 5rem 2.5rem;
@@ -35,9 +42,9 @@ const MoreLoreCardsWrapper = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   z-index: 3;
   gap: 5rem;
-
+  justify-self: center;
   max-width: 900px;
-  align-self: center;
+
   overflow-x: hidden;
 
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
@@ -113,26 +120,23 @@ const MoreLoreCard = styled.div`
 const MoreLore = () => {
   return (
     <MoreLoreWrapper>
-      <BorderDivider
-        src="https://uploads-ssl.webflow.com/618920e5b4d12352352ee7e3/61914aab7dd18b4630f5d4ad_hero%20text3.png"
-        alt="brush"
-      />
-      <SectionTitle textAlignEnd>Lore</SectionTitle>
-      <MoreLoreCardsWrapper>
-        <MoreLoreCard>
-          <p>The Imprisoned Deities</p>
-          <span>{">"}</span>
-        </MoreLoreCard>
-        <MoreLoreCard>
-          <p>Infernals Uprising</p>
-          <span>{">"}</span>
-        </MoreLoreCard>
-        <MoreLoreCard>
-          <p>The Great Omniwar</p>
-          <span>{">"}</span>
-        </MoreLoreCard>
-      </MoreLoreCardsWrapper>
-      {/* <BorderDivider /> */}
+      <div>
+        <SectionTitle textAlignEnd>Lore</SectionTitle>
+        <MoreLoreCardsWrapper>
+          <MoreLoreCard>
+            <p>The Imprisoned Deities</p>
+            <span>{">"}</span>
+          </MoreLoreCard>
+          <MoreLoreCard>
+            <p>Infernals Uprising</p>
+            <span>{">"}</span>
+          </MoreLoreCard>
+          <MoreLoreCard>
+            <p>The Great Omniwar</p>
+            <span>{">"}</span>
+          </MoreLoreCard>
+        </MoreLoreCardsWrapper>
+      </div>
     </MoreLoreWrapper>
   )
 }
