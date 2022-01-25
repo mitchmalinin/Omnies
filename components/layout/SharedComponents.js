@@ -34,7 +34,7 @@ export const MoreButton = styled.button`
   background: ${({ backgroundColor }) =>
     Color(theme[backgroundColor]).alpha(0.12)};
   padding: 0.5em 2em;
-  font-size: 1.25rem;
+  font-size: ${({ fontSize }) => fontSize ?? "1.25rem"};
   width: max-content;
   color: ${theme.white};
   transition: all 0.2s ease-in;

@@ -215,7 +215,9 @@ export default function Home() {
           <HeroInnerContentWrapper>
             <HeroTitle>Omnia</HeroTitle>
             <HeroSubtitle>REALM OF THE OMNIES</HeroSubtitle>
-            <MoreButton backgroundColor="red">Enter the Discord</MoreButton>
+            <MoreButton backgroundColor="red" fontSize="1.5rem">
+              Are You Worthy?
+            </MoreButton>
           </HeroInnerContentWrapper>
           <HeroSocials>
             <SocialsIcons row />
