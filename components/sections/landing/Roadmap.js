@@ -17,7 +17,7 @@ const RoadmapWrapper = styled.div`
   overflow-x: hidden;
   background-color: ${theme.lightGrey};
 
-  background-image: url("/images/map2.png");
+  background-image: url("/images/map3.png");
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -33,7 +33,7 @@ const RoadmapContentWrapper = styled.div`
   grid-template-columns: 1fr 1fr;
   margin-top: 5rem;
   gap: 3rem;
-
+  height: 600px;
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     grid-template-columns: 1fr;
   }
@@ -73,9 +73,9 @@ const Roadmap = () => {
       <RoadmapWrapper>
         <SectionTitle id="roadmap">Roadmap</SectionTitle>
         <RoadmapContentWrapper>
-          <RoadMapItem>
+          {/* <RoadMapItem>
             <h2>Phase 1</h2>
-            {/* <h3>Feburary 2021.</h3> */}
+            
             <p>
               Launch of 200 Genesis Omnies - Each Genesis Omnie will earn three
               Deities and three Weapons air dropped during later Phases
@@ -89,7 +89,7 @@ const Roadmap = () => {
           </RoadMapItem>
           <RoadMapItem>
             <h2>Phase 2</h2>
-            {/* {/* <h3>March 2021.</h3> */}
+          
             <p>
               Launch of 8,888 Generative Omnies - Each Generative Omnie will
               earn one Deitie and one Weapon air dropped
@@ -103,7 +103,7 @@ const Roadmap = () => {
           </RoadMapItem>
           <RoadMapItem>
             <h2>Phase 3</h2>
-            {/* {/* <h3>April 2021.</h3> */}
+        
             <p>
               Rare Giveaway to a select few Omnimpians deemed worthy of control
               by the Forger
@@ -111,7 +111,7 @@ const Roadmap = () => {
           </RoadMapItem>
           <RoadMapItem>
             <h2>Phase 4</h2>
-            {/* {/* <h3>May 2021.</h3> */}
+            
             <p>
               Auctions of special items/NFTs, proceeds will go towards Omnia
               buildout in NFT Worlds
@@ -119,12 +119,12 @@ const Roadmap = () => {
           </RoadMapItem>
           <RoadMapItem>
             <h2>Phase 5</h2>
-            {/* <h3>June 2021.</h3> */}
+          
             <p>Omnie Avatar integration into metaverse</p>
           </RoadMapItem>
           <RoadMapItem>
             <h2>Phase 6</h2>
-            {/* <h3>June 2021.</h3> */}
+          
             <p>
               Airdrop of Weapons to be used in the Metaverse
               <ul>
@@ -135,7 +135,7 @@ const Roadmap = () => {
           </RoadMapItem>
           <RoadMapItem>
             <h2>Phase 7</h2>
-            {/* <h3>June 2021.</h3> */}
+          
             <p>
               Launch of The Omnia Store to facilitate the sale of merchandise
               and weapons and accessories to be used in NFT Lands
@@ -143,7 +143,7 @@ const Roadmap = () => {
           </RoadMapItem>
           <RoadMapItem>
             <h2>Phase 8</h2>
-            {/* <h3>June 2021.</h3> */}
+            
             <p>
               NFT Worlds metaverse buildout of the four realms of Omnia
               (Enchanted Forest, The Mainland, The Forgotten Realm, The
@@ -152,7 +152,7 @@ const Roadmap = () => {
           </RoadMapItem>
           <RoadMapItem>
             <h2>Phase 9</h2>
-            {/* <h3>June 2021.</h3> */}
+            
             <p>
               Airdrop of Deities for Omnipians
               <ul>
@@ -160,7 +160,7 @@ const Roadmap = () => {
                 <li>1 Deitie per Generative Omnie</li>
               </ul>
             </p>
-          </RoadMapItem>
+          </RoadMapItem> */}
         </RoadmapContentWrapper>
       </RoadmapWrapper>
     </ContentWrapper>
