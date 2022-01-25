@@ -13,7 +13,7 @@ const AccordWrapper = styled.div`
   justify-content: flex-start;
   width: 100%;
   z-index: 5;
-  gap: 2rem;
+  gap: 3rem;
   padding: 7rem 5.5rem 7rem 5.5rem;
   max-width: 1500px;
   align-self: center;

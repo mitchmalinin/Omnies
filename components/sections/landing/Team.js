@@ -17,6 +17,18 @@ const Wrapper = styled.div`
   align-self: center;
   overflow-x: hidden;
   background: ${theme.lightGrey};
+
+  overflow: hidden;
+  padding-top: 220px;
+  padding-bottom: 300px;
+  /* background-color: #181716; */
+  background-image: url("https://uploads-ssl.webflow.com/618920e5b4d12352352ee7e3/618eb27e1e47b97dfffcb888_tex-bottom-1.png"),
+    url("https://uploads-ssl.webflow.com/618920e5b4d12352352ee7e3/618eb27e0d79bc96755d2f6b_tex-top-1.png");
+  background-position: 50% 100%, 50% 0%;
+  background-size: contain, contain;
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: scroll, scroll;
+
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     padding: 0 2.5rem;
     margin-top: 5rem;

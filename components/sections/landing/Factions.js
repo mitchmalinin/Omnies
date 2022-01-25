@@ -18,7 +18,13 @@ const FactionsWrapper = styled.div`
 
   max-width: 1500px;
   align-self: center;
-  overflow-x: hidden;
+  /* overflow-x: hidden;
+  background-image: url("https://uploads-ssl.webflow.com/618920e5b4d12352352ee7e3/618eb27e1e47b97dfffcb888_tex-bottom-1.png"),
+    url("https://uploads-ssl.webflow.com/618920e5b4d12352352ee7e3/618eb27e0d79bc96755d2f6b_tex-top-1.png");
+  background-position: 50% 100%, 50% 0%;
+  background-size: contain, contain;
+  background-repeat: no-repeat, no-repeat; */
+  /* background-attachment: scroll, scroll; */
 
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     padding: 0 2.5rem;
@@ -74,20 +80,22 @@ const LeaderImgWrapper = styled.div`
   min-width: 300px;
   height: 100%;
   flex: 1;
+  height: min-content;
+
+  &:before {
+    content: "";
+    height: 50%; //You can change this if you want smaller/bigger borders
+    width: 110%;
+    position: absolute;
+    right: -15px;
+    bottom: 0;
+    border: 1.5px solid ${({ borderColor }) => theme[borderColor]};
+  }
 
   img {
     z-index: 10;
     width: 100%;
-
-    &:before {
-      content: "";
-      height: 100%; //You can change this if you want smaller/bigger borders
-      width: 1px;
-      position: absolute;
-      right: 0;
-      top: 0;
-      background-color: ${theme.white};
-    }
+    position: relative;
   }
 
   /* .img-border {
@@ -105,9 +113,8 @@ const Factions = () => {
       <FactionsWrapper>
         <SectionTitle textAlignEnd>The Four Factions</SectionTitle>
         <LeaderCard>
-          <LeaderImgWrapper>
+          <LeaderImgWrapper borderColor="yellow">
             <img src="/images/heroics.png" />
-            <div className="img-border" />
           </LeaderImgWrapper>
           <LeaderCardDesc textColor="yellow" imgLeft>
             <h3>Heroics</h3>
@@ -133,14 +140,13 @@ const Factions = () => {
             </p>
             {/* <MoreButton backgroundColor="red">More</MoreButton> */}
           </LeaderCardDesc>
-          <LeaderImgWrapper>
+          <LeaderImgWrapper borderColor="red">
             <img src="/images/infernals.png" />
           </LeaderImgWrapper>
         </LeaderCard>
         <LeaderCard>
-          <LeaderImgWrapper>
+          <LeaderImgWrapper borderColor="teal">
             <img src="/images/atlins.png" />
-            <div className="img-border" />
           </LeaderImgWrapper>
           <LeaderCardDesc textColor="teal" imgLeft>
             <h3>Atlins</h3>
@@ -164,9 +170,8 @@ const Factions = () => {
             </p>
             {/* <MoreButton backgroundColor="purple">More</MoreButton> */}
           </LeaderCardDesc>
-          <LeaderImgWrapper>
+          <LeaderImgWrapper borderColor="purple">
             <img src="/images/mystics.png" />
-            <div className="img-border" />
           </LeaderImgWrapper>
         </LeaderCard>
       </FactionsWrapper>

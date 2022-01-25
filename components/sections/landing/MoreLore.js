@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { theme } from "../../palette"
 import Color from "color"
+import { SectionTitle } from "../../layout/SharedComponents"
 
 const BorderDivider = styled.img`
   position: absolute;
@@ -10,9 +11,8 @@ const BorderDivider = styled.img`
   z-index: 1;
   /* background-position: center; */
   /* background-color: red; */
-  top: -5rem;
+  top: -12rem;
   width: 100%;
-  height: 250px;
 `
 
 const MoreLoreWrapper = styled.div`
@@ -20,8 +20,10 @@ const MoreLoreWrapper = styled.div`
   background-color: ${theme.grey};
   display: grid;
   place-items: center;
-  padding: 8rem 5.5rem;
-
+  gap: 4rem;
+  padding: 4rem 5.5rem 9rem 5.5rem;
+  justify-items: flex-end;
+  overflow: hidden;
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     grid-template-columns: 1fr;
     padding: 5rem 2.5rem;
@@ -111,7 +113,11 @@ const MoreLoreCard = styled.div`
 const MoreLore = () => {
   return (
     <MoreLoreWrapper>
-      {/* <BorderDivider src="/images/dividers/brush2.png" alt="brush" /> */}
+      <BorderDivider
+        src="https://uploads-ssl.webflow.com/618920e5b4d12352352ee7e3/61914aab7dd18b4630f5d4ad_hero%20text3.png"
+        alt="brush"
+      />
+      <SectionTitle textAlignEnd>Lore</SectionTitle>
       <MoreLoreCardsWrapper>
         <MoreLoreCard>
           <p>The Imprisoned Deities</p>

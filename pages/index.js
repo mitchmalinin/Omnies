@@ -11,6 +11,7 @@ import {
   SectionTitle,
   ContentWrapper,
 } from "../components/layout/SharedComponents"
+import SocialsIcons from "../components/modules/SocialsIcons"
 
 const Wrapper = styled.div`
   /* background-image: url("../images/test-texture.png"); */
@@ -27,7 +28,6 @@ const HeroWrapper = styled.div`
   background-image: url("../images/hero-desktop.png");
   background-size: cover;
   background-position: center;
-
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     background-image: url("../images/hero-mobile.png");
   }
@@ -38,6 +38,10 @@ const NavWrapper = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  background-color: #00000045;
 
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     display: none;
@@ -48,7 +52,6 @@ const NavItemsWrapper = styled.ul`
   display: grid;
   grid-auto-flow: column;
   gap: 2rem;
-
   a {
     text-decoration: none;
     color: ${theme.white};
@@ -59,6 +62,23 @@ const NavItem = styled.li`
   list-style-type: none;
   font-size: 1.2rem;
   cursor: pointer;
+  position: relative;
+
+  &:before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 50%;
+    transform: scale(0, 1);
+    transition: transform 0.3s ease;
+    transform-origin: 0% 100%;
+    background: ${theme.yellow};
+  }
+
+  &:hover:before {
+    transform: scale(1, 1);
+  }
 `
 
 const Logo = styled.p`
@@ -68,13 +88,16 @@ const Logo = styled.p`
 
 const HeroContentWrapper = styled.div`
   /* padding: 10rem 0 0 8.5rem; */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  display: grid;
+  place-items: center;
   height: 70%;
-  margin-left: 12vw;
-  margin-top: 10vh;
+`
+
+const HeroInnerContentWrapper = styled.div`
+  display: grid;
+  grid-auto-rows: min-content;
+  gap: 2rem;
+  text-align: center;
 `
 
 const HeroTitle = styled.h1`
@@ -89,7 +112,6 @@ const HeroTitle = styled.h1`
 
 const HeroSubtitle = styled.h2`
   font-size: 3rem;
-  margin-bottom: 7.25rem;
 
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     font-size: 2rem;
@@ -124,50 +146,6 @@ const Footer = styled.div`
   color: ${theme.silver};
 `
 
-const SocialIconWrapper = styled.div`
-  display: grid;
-  place-items: center;
-  width: 4rem;
-  height: 4rem;
-  font-size: 1.5rem;
-  position: relative;
-  color: ${theme.white};
-  cursor: pointer;
-
-  i {
-    z-index: 999;
-  }
-
-  &:before {
-    content: "";
-    background-color: ${Color(theme.yellow).alpha(0.12)};
-    border: 1px solid ${theme.yellow};
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    transition: all 0.2s ease-in;
-    transform: rotate(45deg);
-  }
-
-  &:hover:before {
-    background-color: ${theme.yellow};
-  }
-
-  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
-    font-size: 1.2rem;
-    width: 3rem;
-    height: 3rem;
-  }
-`
-const SocialsWrapper = styled.div`
-  display: grid;
-  grid-template-columns: min-content min-content;
-  gap: 3rem;
-
-  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
-    margin-top: 3rem;
-  }
-`
 const Socials = styled.div`
   overflow: hidden;
   width: 100%;
@@ -232,15 +210,14 @@ export default function Home() {
             <a href="#roadmap">
               <NavItem>ROADMAP</NavItem>
             </a>
-            <a href="#socials">
-              <NavItem>SOCIALS</NavItem>
-            </a>
           </NavItemsWrapper>
         </NavWrapper>
         <HeroContentWrapper>
-          <HeroTitle>Omnia</HeroTitle>
-          <HeroSubtitle>REALM OF THE OMNIES</HeroSubtitle>
-          {/* <EnterButton>Enter</EnterButton> */}
+          <HeroInnerContentWrapper>
+            <HeroTitle>Omnia</HeroTitle>
+            <HeroSubtitle>REALM OF THE OMNIES</HeroSubtitle>
+            {/* <EnterButton>Enter</EnterButton> */}
+          </HeroInnerContentWrapper>
         </HeroContentWrapper>
         <HeroGodsImgWrapper>
           {/* <Image
@@ -264,16 +241,9 @@ export default function Home() {
           </SectionTitle>
           <SocialsContentWrapper>
             <p>Need a cool slogan here</p>
-            <SocialsWrapper>
-              <SocialIconWrapper>
-                <i className="fab fa-discord"></i>
-              </SocialIconWrapper>
-              <SocialIconWrapper>
-                <i className="fab fa-twitter"></i>
-              </SocialIconWrapper>
-            </SocialsWrapper>
+            <SocialsIcons />
           </SocialsContentWrapper>
-        </Socials>{" "}
+        </Socials>
       </ContentWrapper>
       <Footer>© 2021 OMNIES. ALL RIGHTS RESERVED.</Footer>
     </Wrapper>
