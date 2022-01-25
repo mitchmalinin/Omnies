@@ -24,7 +24,7 @@ const MoreLoreWrapper = styled.div`
   justify-items: flex-end;
   overflow: hidden;
 
-  div {
+  .test {
     max-width: 1920px;
     display: grid;
     gap: 4rem;
@@ -41,9 +41,8 @@ const MoreLoreCardsWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   z-index: 3;
-  gap: 5rem;
   justify-self: center;
-  max-width: 900px;
+  /* max-width: 900px; */
 
   overflow-x: hidden;
 
@@ -62,12 +61,22 @@ const MoreLoreCard = styled.div`
   position: relative;
   padding: 1rem;
   height: 250px;
-  color: ${theme.white};
-  font-size: 2.5rem;
+  color: #040200a3;
+  font-size: 2rem;
   word-spacing: unset;
   display: table-caption;
   transition: all 0.2s ease-in;
   cursor: pointer;
+  background-image: url("/images/scroll.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 350px;
+  height: 350px;
+
+  display: grid;
+  place-items: center;
+
   /* background-color: ${Color(theme.red).alpha(0.12)};
   border: 1.5px solid ${theme.red};
 
@@ -75,7 +84,7 @@ const MoreLoreCard = styled.div`
     background-color: ${theme.red};
   } */
 
-  &:nth-child(1) {
+  /* &:nth-child(1) {
     background-color: ${Color(theme.red).alpha(0.12)};
     border: 1.5px solid ${theme.red};
 
@@ -98,21 +107,17 @@ const MoreLoreCard = styled.div`
     &:hover {
       background-color: ${theme.purple};
     }
-  }
+  } */
 
   p {
     word-spacing: 100vw;
-  }
-
-  span {
-    position: absolute;
-    bottom: 20px;
-    right: 30px;
+    width: min-content;
+    transform: skew(14deg);
   }
 
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
-    width: 200px;
-    height: 210px;
+    width: 300px;
+    height: 300px;
     font-size: 2rem;
   }
 `
@@ -120,20 +125,17 @@ const MoreLoreCard = styled.div`
 const MoreLore = () => {
   return (
     <MoreLoreWrapper>
-      <div>
+      <div className="test">
         <SectionTitle textAlignEnd>Lore</SectionTitle>
         <MoreLoreCardsWrapper>
           <MoreLoreCard>
             <p>The Imprisoned Deities</p>
-            <span>{">"}</span>
           </MoreLoreCard>
           <MoreLoreCard>
             <p>Infernals Uprising</p>
-            <span>{">"}</span>
           </MoreLoreCard>
           <MoreLoreCard>
             <p>The Great Omniwar</p>
-            <span>{">"}</span>
           </MoreLoreCard>
         </MoreLoreCardsWrapper>
       </div>

@@ -90,7 +90,7 @@ const LeaderImgWrapper = styled.div`
     position: absolute;
     right: -15px;
     bottom: 0;
-    border: 3px solid ${({ borderColor }) => theme[borderColor]};
+    border: 2px solid ${({ borderColor }) => theme[borderColor]};
   }
 
   img {
@@ -98,14 +98,6 @@ const LeaderImgWrapper = styled.div`
     width: 100%;
     position: relative;
   }
-
-  /* .img-border {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 50%;
-    border: 2px solid ${theme.white};
-  } */
 `
 
 const Factions = () => {
