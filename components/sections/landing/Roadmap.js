@@ -15,7 +15,13 @@ const RoadmapWrapper = styled.div`
   max-width: 1920px;
   align-self: center;
   overflow-x: hidden;
-  background-color: ${theme.grey};
+  background-color: ${theme.lightGrey};
+
+  background-image: url("/images/map.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     padding: 0 2.5rem;
     margin-top: 5rem;

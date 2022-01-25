@@ -77,38 +77,6 @@ const MoreLoreCard = styled.div`
   display: grid;
   place-items: center;
 
-  /* background-color: ${Color(theme.red).alpha(0.12)};
-  border: 1.5px solid ${theme.red};
-
-  &:hover {
-    background-color: ${theme.red};
-  } */
-
-  /* &:nth-child(1) {
-    background-color: ${Color(theme.red).alpha(0.12)};
-    border: 1.5px solid ${theme.red};
-
-    &:hover {
-      background-color: ${theme.red};
-    }
-  }
-
-  &:nth-child(2) {
-    background-color: ${Color(theme.teal).alpha(0.12)};
-    border: 1.5px solid ${theme.teal};
-    &:hover {
-      background-color: ${theme.teal};
-    }
-  }
-
-  &:nth-child(3) {
-    background-color: ${Color(theme.purple).alpha(0.2)};
-    border: 1.5px solid ${theme.purple};
-    &:hover {
-      background-color: ${theme.purple};
-    }
-  } */
-
   p {
     word-spacing: 100vw;
     width: min-content;
