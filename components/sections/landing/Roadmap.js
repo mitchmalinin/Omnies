@@ -17,7 +17,7 @@ const RoadmapWrapper = styled.div`
   overflow-x: hidden;
   background-color: ${theme.lightGrey};
 
-  background-image: url("/images/map.png");
+  background-image: url("/images/map2.png");
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
