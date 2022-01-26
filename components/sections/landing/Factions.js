@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { theme } from "../../palette"
+import { theme, sizes } from "../../palette"
 import {
   SectionTitle,
   MoreButton,
@@ -8,24 +8,23 @@ import {
 } from "../../layout/SharedComponents"
 import Color from "color"
 
+const FactionsContentWrapper = styled(ContentWrapper)`
+  background-image: url("/images/dividers/2.png"), url("/images/dividers/6.png");
+  background-position: 50% 100%, 50% 0%;
+  background-size: contain, contain;
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: scroll, scroll;
+`
+
 const FactionsWrapper = styled.div`
   width: 100%;
   display: grid;
   grid-auto-rows: min-content;
   gap: 5rem;
-  background-color: ${theme.grey};
   padding: 5rem 5.5rem;
-
-  max-width: 1920px;
+  max-width: ${sizes.maxWidth};
   align-self: center;
   overflow-x: hidden;
-  /* background-image: url("https://uploads-ssl.webflow.com/618920e5b4d12352352ee7e3/618eb27e1e47b97dfffcb888_tex-bottom-1.png"),
-    url("https://uploads-ssl.webflow.com/618920e5b4d12352352ee7e3/618eb27e0d79bc96755d2f6b_tex-top-1.png");
-  background-position: 50% 100%, 50% 0%;
-  background-size: contain, contain;
-  background-repeat: no-repeat, no-repeat; */
-
-  /* background-attachment: scroll, scroll; */
 
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     padding: 0 2.5rem;
@@ -102,7 +101,7 @@ const LeaderImgWrapper = styled.div`
 
 const Factions = () => {
   return (
-    <ContentWrapper backgroundColor="grey">
+    <FactionsContentWrapper backgroundColor="grey">
       <FactionsWrapper>
         <SectionTitle textAlignEnd>The Four Factions</SectionTitle>
         <LeaderCard>
@@ -168,7 +167,7 @@ const Factions = () => {
           </LeaderImgWrapper>
         </LeaderCard>
       </FactionsWrapper>
-    </ContentWrapper>
+    </FactionsContentWrapper>
   )
 }
 

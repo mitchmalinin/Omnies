@@ -1,23 +1,29 @@
 import React from "react"
 import styled from "styled-components"
-import { theme } from "../../palette"
+import { theme, sizes } from "../../palette"
 import {
   SectionTitle,
   MoreButton,
   ContentWrapper,
 } from "../../layout/SharedComponents"
 
+const RoadMapContentWrapper = styled(ContentWrapper)`
+  background-image: url("/images/dividers/3.png"), url("/images/dividers/5.png");
+  background-position: 50% 100%, 50% 0%;
+  background-size: contain, contain;
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: scroll, scroll;
+`
+
 const RoadmapWrapper = styled.div`
   width: 100%;
   display: grid;
   grid-auto-rows: min-content;
-  padding: 5rem 5.5rem;
-  max-width: 1920px;
+  padding: 6rem 5.5rem 5rem 5.5rem;
+  max-width: ${sizes.maxWidth};
   align-self: center;
   overflow-x: hidden;
-  background-color: ${theme.lightGrey};
-
-  background-image: url("/images/Map7.png");
+  /* background-image: url("/images/Map7.png"); */
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -33,7 +39,7 @@ const RoadmapContentWrapper = styled.div`
   grid-template-columns: 1fr 1fr;
   margin-top: 5rem;
   gap: 3rem;
-  height: 600px;
+  /* height: 600px; */
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     grid-template-columns: 1fr;
   }
@@ -69,13 +75,15 @@ const RoadMapItem = styled.div`
 
 const Roadmap = () => {
   return (
-    <ContentWrapper backgroundColor="grey">
+    <RoadMapContentWrapper backgroundColor="grey">
       <RoadmapWrapper>
-        <SectionTitle id="roadmap">Roadmap</SectionTitle>
+        <SectionTitle id="roadmap" textAlignEnd>
+          Roadmap
+        </SectionTitle>
         <RoadmapContentWrapper>
-          {/* <RoadMapItem>
+          <RoadMapItem>
             <h2>Phase 1</h2>
-            
+
             <p>
               Launch of 200 Genesis Omnies - Each Genesis Omnie will earn three
               Deities and three Weapons air dropped during later Phases
@@ -89,7 +97,7 @@ const Roadmap = () => {
           </RoadMapItem>
           <RoadMapItem>
             <h2>Phase 2</h2>
-          
+
             <p>
               Launch of 8,888 Generative Omnies - Each Generative Omnie will
               earn one Deitie and one Weapon air dropped
@@ -103,7 +111,7 @@ const Roadmap = () => {
           </RoadMapItem>
           <RoadMapItem>
             <h2>Phase 3</h2>
-        
+
             <p>
               Rare Giveaway to a select few Omnimpians deemed worthy of control
               by the Forger
@@ -111,7 +119,7 @@ const Roadmap = () => {
           </RoadMapItem>
           <RoadMapItem>
             <h2>Phase 4</h2>
-            
+
             <p>
               Auctions of special items/NFTs, proceeds will go towards Omnia
               buildout in NFT Worlds
@@ -119,12 +127,12 @@ const Roadmap = () => {
           </RoadMapItem>
           <RoadMapItem>
             <h2>Phase 5</h2>
-          
+
             <p>Omnie Avatar integration into metaverse</p>
           </RoadMapItem>
           <RoadMapItem>
             <h2>Phase 6</h2>
-          
+
             <p>
               Airdrop of Weapons to be used in the Metaverse
               <ul>
@@ -135,7 +143,7 @@ const Roadmap = () => {
           </RoadMapItem>
           <RoadMapItem>
             <h2>Phase 7</h2>
-          
+
             <p>
               Launch of The Omnia Store to facilitate the sale of merchandise
               and weapons and accessories to be used in NFT Lands
@@ -143,7 +151,7 @@ const Roadmap = () => {
           </RoadMapItem>
           <RoadMapItem>
             <h2>Phase 8</h2>
-            
+
             <p>
               NFT Worlds metaverse buildout of the four realms of Omnia
               (Enchanted Forest, The Mainland, The Forgotten Realm, The
@@ -152,7 +160,7 @@ const Roadmap = () => {
           </RoadMapItem>
           <RoadMapItem>
             <h2>Phase 9</h2>
-            
+
             <p>
               Airdrop of Deities for Omnipians
               <ul>
@@ -160,10 +168,10 @@ const Roadmap = () => {
                 <li>1 Deitie per Generative Omnie</li>
               </ul>
             </p>
-          </RoadMapItem> */}
+          </RoadMapItem>
         </RoadmapContentWrapper>
       </RoadmapWrapper>
-    </ContentWrapper>
+    </RoadMapContentWrapper>
   )
 }
 

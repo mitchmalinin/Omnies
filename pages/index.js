@@ -1,6 +1,6 @@
 import Head from "next/head"
 import styled from "styled-components"
-import { theme } from "../components/palette"
+import { theme, sizes } from "../components/palette"
 import Color from "color"
 import Roadmap from "../components/sections/landing/Roadmap"
 import Factions from "../components/sections/landing/Factions"
@@ -31,6 +31,16 @@ const HeroWrapper = styled.div`
   background-position: center;
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     background-image: url("../images/hero-mobile.png");
+  }
+`
+
+const BorderDivider = styled.img`
+  width: 100%;
+  position: absolute;
+  bottom: -60px;
+  height: 150px;
+  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    bottom: 0px;
   }
 `
 
@@ -150,8 +160,8 @@ const Socials = styled.div`
   width: 100%;
   display: grid;
   grid-auto-rows: min-content;
-  padding: 5rem 5.5rem;
-  max-width: 1920px;
+  padding: 5rem 5.5rem 2rem 5.5rem;
+  max-width: ${sizes.maxWidth};
   align-self: center;
   overflow-x: hidden;
   background-color: ${theme.lightGrey};
@@ -223,7 +233,7 @@ export default function Home() {
             <SocialsIcons row />
           </HeroSocials>
         </HeroContentWrapper>
-        <HeroGodsImgWrapper></HeroGodsImgWrapper>
+        <BorderDivider src="/images/dividers/top.png" />
       </HeroWrapper>
       <MoreLore />
       <Accord />
@@ -232,9 +242,7 @@ export default function Home() {
       <Roadmap />
       <ContentWrapper backgroundColor="lightGrey">
         <Socials>
-          <SectionTitle id="socials" textAlignEnd>
-            Socials
-          </SectionTitle>
+          <SectionTitle id="socials">Socials</SectionTitle>
           <SocialsContentWrapper>
             <p>Need a cool slogan here</p>
             <SocialsIcons />

@@ -5,7 +5,7 @@ import {
   ContentWrapper,
 } from "../../layout/SharedComponents"
 import styled from "styled-components"
-import { theme } from "../../palette"
+import { theme, sizes } from "../../palette"
 import { teamMembers } from "../../utils/staticData"
 
 const Wrapper = styled.div`
@@ -13,14 +13,10 @@ const Wrapper = styled.div`
   display: grid;
   grid-auto-rows: min-content;
   padding: 5rem 5.5rem;
-  max-width: 1920px;
+  max-width: ${sizes.maxWidth};
   align-self: center;
   overflow-x: hidden;
   background: ${theme.lightGrey};
-
-  overflow: hidden;
-  padding-top: 220px;
-  padding-bottom: 300px;
 
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     padding: 0 2.5rem;
@@ -74,9 +70,7 @@ const Team = () => {
   return (
     <ContentWrapper backgroundColor="lightGrey">
       <Wrapper>
-        <SectionTitle id="team" textAlignEnd>
-          The Council
-        </SectionTitle>
+        <SectionTitle id="team">The Council</SectionTitle>
         <TeamMembersWrapper>
           {teamMembers.map((member) => {
             return (

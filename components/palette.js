@@ -8,3 +8,7 @@ export const theme = {
   lightGrey: "#33322d",
   silver: "#c2c2c2",
 }
+
+export const sizes = {
+  maxWidth: "1500px",
+}

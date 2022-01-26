@@ -1,39 +1,37 @@
 import React from "react"
 import styled from "styled-components"
-import { theme } from "../../palette"
+import { theme, sizes } from "../../palette"
 import Color from "color"
 import { SectionTitle } from "../../layout/SharedComponents"
-
-const BorderDivider = styled.img`
-  position: absolute;
-  /* ${({ top }) => (top ? "top: -4rem;" : "bottom: -4rem;")}; */
-  /* top: -10rem; */
-  z-index: 1;
-  /* background-position: center; */
-  /* background-color: red; */
-  top: -12rem;
-  width: 100%;
-`
 
 const MoreLoreWrapper = styled.div`
   position: relative;
   background-color: ${theme.grey};
   display: grid;
   place-items: center;
-  padding: 4rem 5.5rem 9rem 5.5rem;
+  padding: 3rem 5.5rem 15rem 5.5rem;
   justify-items: flex-end;
   overflow: hidden;
-
-  .test {
-    max-width: 1920px;
-    display: grid;
-    gap: 4rem;
-    justify-self: center;
-  }
+  background-image: url("/images/dividers/4.png");
+  background-position: bottom;
+  background-size: 100%;
+  background-repeat: no-repeat;
 
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     grid-template-columns: 1fr;
-    padding: 5rem 2.5rem;
+    padding: 0rem 2.5rem 6rem 2.5rem;
+    gap: 0rem;
+  }
+`
+
+const MoreLoreInnerWrapper = styled.div`
+  max-width: ${sizes.maxWidth};
+  display: grid;
+  gap: 4rem;
+  justify-self: center;
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    gap: 0rem;
   }
 `
 
@@ -93,7 +91,7 @@ const MoreLoreCard = styled.div`
 const MoreLore = () => {
   return (
     <MoreLoreWrapper>
-      <div className="test">
+      <MoreLoreInnerWrapper>
         <SectionTitle textAlignEnd>Lore</SectionTitle>
         <MoreLoreCardsWrapper>
           <MoreLoreCard>
@@ -106,7 +104,7 @@ const MoreLore = () => {
             <p>The Great Omniwar</p>
           </MoreLoreCard>
         </MoreLoreCardsWrapper>
-      </div>
+      </MoreLoreInnerWrapper>
     </MoreLoreWrapper>
   )
 }

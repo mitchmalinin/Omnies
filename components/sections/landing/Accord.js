@@ -1,5 +1,5 @@
 import React from "react"
-import { theme } from "../../palette"
+import { theme, sizes } from "../../palette"
 import styled from "styled-components"
 import {
   SectionTitle,
@@ -15,13 +15,13 @@ const AccordWrapper = styled.div`
   z-index: 5;
   gap: 3rem;
   padding: 7rem 5.5rem 7rem 5.5rem;
-  max-width: 1920px;
+  max-width: ${sizes.maxWidth};
   align-self: center;
   overflow-x: hidden;
   background-color: ${theme.lightGrey};
 
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
-    padding: 0 2.5rem;
+    padding: 4rem 2.5rem;
   }
 `
 
