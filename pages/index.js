@@ -1,3 +1,4 @@
+import { useEffect, setState } from "react"
 import Head from "next/head"
 import styled from "styled-components"
 import { theme, sizes } from "../components/palette"
@@ -40,7 +41,7 @@ const BorderDivider = styled.img`
   bottom: -60px;
   height: 150px;
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
-    bottom: 0px;
+    bottom: -63px;
   }
 `
 
@@ -52,7 +53,6 @@ const NavWrapper = styled.nav`
   width: 100%;
   position: fixed;
   z-index: 999;
-  background-color: #00000045;
 
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     display: none;
@@ -74,6 +74,7 @@ const NavItem = styled.li`
   font-size: 1.2rem;
   cursor: pointer;
   position: relative;
+  transition: all 0.2s ease-in;
 
   &:before {
     content: "";
@@ -101,13 +102,19 @@ const HeroContentWrapper = styled.div`
   /* padding: 10rem 0 0 8.5rem; */
   display: grid;
   place-items: center;
-  height: 80%;
+  height: 100%;
+  background: #0000004f;
   position: relative;
 `
 const HeroSocials = styled.div`
   position: absolute;
   top: 15vh;
   right: 50px;
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    top: 0;
+    right: 40px;
+  }
 `
 
 const HeroInnerContentWrapper = styled.div`

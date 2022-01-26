@@ -40,6 +40,7 @@ const MoreLoreCardsWrapper = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   z-index: 3;
   justify-self: center;
+  gap: 3rem;
   /* max-width: 900px; */
 
   overflow-x: hidden;
@@ -51,7 +52,6 @@ const MoreLoreCardsWrapper = styled.div`
 
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     grid-template-columns: 1fr;
-    gap: 3rem;
   }
 `
 
@@ -69,16 +69,14 @@ const MoreLoreCard = styled.div`
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  width: 350px;
-  height: 350px;
-
+  width: 300px;
+  height: 300px;
   display: grid;
   place-items: center;
 
   p {
     word-spacing: 100vw;
     width: min-content;
-    transform: skew(14deg);
   }
 
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {

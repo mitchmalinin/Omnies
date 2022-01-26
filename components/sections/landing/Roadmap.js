@@ -13,28 +13,33 @@ const RoadMapContentWrapper = styled(ContentWrapper)`
   background-size: contain, contain;
   background-repeat: no-repeat, no-repeat;
   background-attachment: scroll, scroll;
+
+  .test {
+    width: 100%;
+    display: grid;
+    grid-auto-rows: min-content;
+    padding: 6rem 5.5rem 5rem 5.5rem;
+    max-width: ${sizes.maxWidth};
+    align-self: center;
+    overflow-x: hidden;
+    gap: 3rem;
+  }
 `
 
 const RoadmapWrapper = styled.div`
-  width: 100%;
-  display: grid;
-  grid-auto-rows: min-content;
-  padding: 6rem 5.5rem 5rem 5.5rem;
-  max-width: ${sizes.maxWidth};
-  align-self: center;
-  overflow-x: hidden;
-  /* background-image: url("/images/Map7.png"); */
+  background-image: url("/images/Roadmap.png");
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
-
+  min-height: 900px;
+  z-index: 1;
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     padding: 0 2.5rem;
     margin-top: 5rem;
   }
 `
 
-const RoadmapContentWrapper = styled.div`
+const RoadmapContentInnnerWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-top: 5rem;
@@ -76,12 +81,13 @@ const RoadMapItem = styled.div`
 const Roadmap = () => {
   return (
     <RoadMapContentWrapper backgroundColor="grey">
-      <RoadmapWrapper>
+      <div className="test">
         <SectionTitle id="roadmap" textAlignEnd>
           Roadmap
         </SectionTitle>
-        <RoadmapContentWrapper>
-          <RoadMapItem>
+        <RoadmapWrapper>
+          <RoadmapContentInnnerWrapper>
+            {/* <RoadMapItem>
             <h2>Phase 1</h2>
 
             <p>
@@ -168,9 +174,10 @@ const Roadmap = () => {
                 <li>1 Deitie per Generative Omnie</li>
               </ul>
             </p>
-          </RoadMapItem>
-        </RoadmapContentWrapper>
-      </RoadmapWrapper>
+          </RoadMapItem>*/}
+          </RoadmapContentInnnerWrapper>
+        </RoadmapWrapper>
+      </div>
     </RoadMapContentWrapper>
   )
 }
