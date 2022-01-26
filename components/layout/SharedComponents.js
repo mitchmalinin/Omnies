@@ -4,7 +4,7 @@ import Color from "color"
 
 export const SectionTitle = styled.h2`
   font-size: 3rem;
-  color: ${theme.yellow};
+  color: ${theme.white};
   z-index: 4;
   position: relative;
   text-align: ${({ textAlignEnd }) => (textAlignEnd ? "end" : "start")};
@@ -14,7 +14,7 @@ export const SectionTitle = styled.h2`
     display: block;
     width: 130px;
     height: 3px;
-    background: ${theme.yellow};
+    background: ${theme.red};
     ${({ textAlignEnd }) => (textAlignEnd ? "right: -10rem" : "left: -10rem")};
     top: 50%;
     position: absolute;

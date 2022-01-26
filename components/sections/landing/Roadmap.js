@@ -18,7 +18,7 @@ const RoadMapContentWrapper = styled(ContentWrapper)`
     width: 100%;
     display: grid;
     grid-auto-rows: min-content;
-    padding: 6rem 5.5rem 5rem 5.5rem;
+    padding: 5rem 5.5rem 14.5rem 5.5rem;
     max-width: ${sizes.maxWidth};
     align-self: center;
     overflow-x: hidden;
