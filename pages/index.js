@@ -143,6 +143,7 @@ const HeroInnerContentWrapper = styled.div`
 
 const HeroTitle = styled.h1`
   /* font-family: heater; */
+  line-height: 0.8;
   font-size: 10rem;
   color: ${theme.yellow};
 

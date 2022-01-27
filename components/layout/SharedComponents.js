@@ -37,7 +37,7 @@ export const MoreButton = styled.button`
   font-size: ${({ fontSize }) => fontSize ?? "1.25rem"};
   width: max-content;
   color: ${theme.white};
-  transition: all 0.2s ease-in;
+  transition: all 0.15s ease-in;
   border-radius: 5px;
   cursor: pointer;
   ${({ boxShadow }) =>

@@ -44,10 +44,7 @@ const MoreLoreCardsWrapper = styled.div`
   gap: 3rem;
   /* max-width: 900px; */
 
-  overflow-x: hidden;
-
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
-    padding: 0 2.5rem;
     margin-top: 5rem;
   }
 
@@ -64,7 +61,7 @@ const MoreLoreCard = styled.div`
   font-size: 2rem;
   word-spacing: unset;
   display: table-caption;
-  transition: all 0.2s ease-in;
+  transition: all 0.15s ease-in;
   cursor: pointer;
   background-image: url("/images/scroll.png");
   background-size: contain;
@@ -78,6 +75,11 @@ const MoreLoreCard = styled.div`
   p {
     word-spacing: 100vw;
     width: min-content;
+  }
+
+  &:hover {
+    filter: drop-shadow(3px 3px 7px #f7fc01) drop-shadow(-3px -1px 7px #f7fc01);
+    transform: scale(1.01);
   }
 
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
