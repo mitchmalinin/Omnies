@@ -27,7 +27,7 @@ const AccordWrapper = styled.div`
 
 const AccordDesc = styled.div`
   font-size: 1.5rem;
-  color: ${theme.white};
+  color: ${theme.silver};
   line-height: 3rem;
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     font-size: 1rem;

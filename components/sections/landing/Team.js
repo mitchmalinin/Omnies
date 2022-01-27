@@ -48,9 +48,9 @@ const TeamMemberNameWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   font-size: 1.5rem;
-  color: ${theme.white};
+  color: ${theme.silver};
   a {
-    color: ${theme.white};
+    color: ${theme.silver};
     text-decoration: none;
     font-size: 1rem;
   }
@@ -63,7 +63,7 @@ const TeamMember = styled.div`
 `
 
 const MemberRoleWrapper = styled.p`
-  color: ${theme.white};
+  color: ${theme.silver};
 `
 
 const Team = () => {

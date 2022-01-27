@@ -56,7 +56,7 @@ const LeaderCardDesc = styled.div`
 
   p {
     font-size: 1.2rem;
-    color: ${theme.white};
+    color: ${theme.silver};
     line-height: 3rem;
   }
 

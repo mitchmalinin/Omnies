@@ -40,7 +40,8 @@ export const MoreButton = styled.button`
   transition: all 0.2s ease-in;
   border-radius: 5px;
   cursor: pointer;
-
+  ${({ boxShadow }) =>
+    boxShadow && "box-shadow: 0px 0px 30px 0px rgba(255, 0, 0, 0.5);"}
   &:hover {
     background: ${({ backgroundColor }) => theme[backgroundColor]};
   }

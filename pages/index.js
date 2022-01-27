@@ -35,6 +35,23 @@ const HeroWrapper = styled.div`
   }
 `
 
+const WorthyButton = styled.div`
+  border: 1.5px solid ${theme.red};
+  background: ${theme.red};
+  padding: 0.5em 2em;
+  font-size: 1.5rem;
+  width: max-content;
+  color: ${theme.white};
+  transition: all 0.2s ease-in;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background: ${Color(theme.red).alpha(0.12)};
+    box-shadow: 0px 0px 30px 0px rgba(255, 0, 0, 0.5);
+  }
+`
+
 const BorderDivider = styled.img`
   width: 100%;
   position: absolute;
@@ -103,7 +120,7 @@ const HeroContentWrapper = styled.div`
   display: grid;
   place-items: center;
   height: 100%;
-  background: #0000004f;
+  background: #0000009e;
   position: relative;
 `
 const HeroSocials = styled.div`
@@ -232,7 +249,7 @@ export default function Home() {
           <HeroInnerContentWrapper>
             <HeroTitle>Omnia</HeroTitle>
             <HeroSubtitle>REALM OF THE OMNIES</HeroSubtitle>
-            <MoreButton backgroundColor="red" fontSize="1.5rem">
+            <MoreButton backgroundColor="red" fontSize="1.5rem" boxShadow>
               Are You Worthy?
             </MoreButton>
           </HeroInnerContentWrapper>
