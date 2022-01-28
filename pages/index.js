@@ -223,7 +223,7 @@ export default function Home() {
       <Head>
         <title>The Omnies</title>
         <meta name="description" content="The one who has all the power" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
         <link
           rel="stylesheet"
           href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
