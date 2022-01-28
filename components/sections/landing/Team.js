@@ -3,6 +3,7 @@ import {
   SectionTitle,
   MoreButton,
   ContentWrapper,
+  FakeAnchor,
 } from "../../layout/SharedComponents"
 import styled from "styled-components"
 import { theme, sizes } from "../../palette"
@@ -38,8 +39,9 @@ const TeamMembersWrapper = styled.div`
 
 const TeamMemberImgWrapper = styled.div`
   img {
-    border: 1px solid ${theme.white};
+    border: 2px solid ${theme.white};
     width: 100%;
+    border-radius: 5px;
   }
 `
 
@@ -48,9 +50,9 @@ const TeamMemberNameWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   font-size: 1.5rem;
-  color: ${theme.silver};
+  color: ${theme.white};
   a {
-    color: ${theme.silver};
+    color: ${theme.teal};
     text-decoration: none;
     font-size: 1rem;
   }
@@ -69,8 +71,9 @@ const MemberRoleWrapper = styled.p`
 const Team = () => {
   return (
     <ContentWrapper backgroundColor="lightGrey">
+      <FakeAnchor id="team" />
       <Wrapper>
-        <SectionTitle id="team">The Council</SectionTitle>
+        <SectionTitle>The Council</SectionTitle>
         <TeamMembersWrapper>
           {teamMembers.map((member) => {
             return (

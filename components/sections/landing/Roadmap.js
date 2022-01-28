@@ -5,6 +5,7 @@ import {
   SectionTitle,
   MoreButton,
   ContentWrapper,
+  FakeAnchor,
 } from "../../layout/SharedComponents"
 
 const RoadMapContentWrapper = styled(ContentWrapper)`
@@ -13,7 +14,7 @@ const RoadMapContentWrapper = styled(ContentWrapper)`
   background-size: contain, contain;
   background-repeat: no-repeat, no-repeat;
   background-attachment: scroll, scroll;
-
+  position: relative;
   .test {
     width: 100%;
     display: grid;
@@ -81,10 +82,9 @@ const RoadMapItem = styled.div`
 const Roadmap = () => {
   return (
     <RoadMapContentWrapper backgroundColor="grey">
+      <FakeAnchor id="roadmap" />
       <div className="test">
-        <SectionTitle id="roadmap" textAlignEnd>
-          Roadmap
-        </SectionTitle>
+        <SectionTitle textAlignEnd>Roadmap</SectionTitle>
         <RoadmapWrapper>
           <RoadmapContentInnnerWrapper>
             {/* <RoadMapItem>

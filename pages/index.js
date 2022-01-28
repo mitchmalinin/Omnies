@@ -70,7 +70,11 @@ const NavWrapper = styled.nav`
   width: 100%;
   position: fixed;
   z-index: 999;
-
+  backdrop-filter: blur(6.5px);
+  a {
+    color: ${theme.white};
+    text-decoration: none;
+  }
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     display: none;
   }
@@ -231,12 +235,17 @@ export default function Home() {
           crossOrigin="anonymous"
         ></link>
       </Head>
-      <HeroWrapper>
+      <HeroWrapper id="hero">
         <NavWrapper>
-          <Logo>Omnies</Logo>
+          <a href="#hero">
+            <Logo>Omnies</Logo>
+          </a>
           <NavItemsWrapper>
             <a href="#about">
               <NavItem>ABOUT</NavItem>
+            </a>
+            <a href="#history">
+              <NavItem>HISTORY</NavItem>
             </a>
             <a href="#team">
               <NavItem>TEAM</NavItem>
@@ -250,9 +259,7 @@ export default function Home() {
           <HeroInnerContentWrapper>
             <HeroTitle>Omnia</HeroTitle>
             <HeroSubtitle>REALM OF THE OMNIES</HeroSubtitle>
-            <MoreButton backgroundColor="red" fontSize="1.5rem" boxShadow>
-              Are You Worthy?
-            </MoreButton>
+            <WorthyButton>Are You Worthy?</WorthyButton>
           </HeroInnerContentWrapper>
           <HeroSocials>
             <SocialsIcons row />
@@ -260,8 +267,8 @@ export default function Home() {
         </HeroContentWrapper>
         <BorderDivider src="/images/dividers/top.png" />
       </HeroWrapper>
-      <MoreLore />
       <Accord />
+      <MoreLore />
       <Factions />
       <Team />
       <Roadmap />

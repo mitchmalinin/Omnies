@@ -52,4 +52,10 @@ export const ContentWrapper = styled.div`
   background-color: ${({ backgroundColor }) => theme[backgroundColor]};
   display: grid;
   place-items: center;
+  position: relative;
+`
+
+export const FakeAnchor = styled.section`
+  position: absolute;
+  top: -80px;
 `

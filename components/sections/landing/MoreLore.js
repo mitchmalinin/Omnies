@@ -2,19 +2,15 @@ import React from "react"
 import styled from "styled-components"
 import { theme, sizes } from "../../palette"
 import Color from "color"
-import { SectionTitle } from "../../layout/SharedComponents"
+import { SectionTitle, FakeAnchor } from "../../layout/SharedComponents"
 
-const MoreLoreWrapper = styled.div`
+const MoreLoreWrapper = styled.section`
   position: relative;
-  background-color: ${theme.grey};
+  background-color: ${theme.lightGrey};
   display: grid;
   place-items: center;
   justify-items: flex-end;
   overflow: hidden;
-  background-image: url("/images/dividers/4.png");
-  background-position: bottom;
-  background-size: 100%;
-  background-repeat: no-repeat;
 
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     grid-template-columns: 1fr;
@@ -27,7 +23,7 @@ const MoreLoreInnerWrapper = styled.div`
   gap: 4rem;
   justify-self: center;
   overflow: hidden;
-  padding: 3rem 5.5rem 15rem 5.5rem;
+  padding: 3rem 5.5rem 9rem 5.5rem;
   width: 100%;
 
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
@@ -91,7 +87,8 @@ const MoreLoreCard = styled.div`
 
 const MoreLore = () => {
   return (
-    <MoreLoreWrapper>
+    <MoreLoreWrapper id="history">
+      <FakeAnchor id="history" />
       <MoreLoreInnerWrapper>
         <SectionTitle textAlignEnd>Lore</SectionTitle>
         <MoreLoreCardsWrapper>

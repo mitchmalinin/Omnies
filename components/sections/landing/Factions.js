@@ -21,14 +21,15 @@ const FactionsWrapper = styled.div`
   display: grid;
   grid-auto-rows: min-content;
   gap: 5rem;
-  padding: 5rem 5.5rem;
+  padding: 7rem 5.5rem 9rem 5.5rem;
   max-width: ${sizes.maxWidth};
   align-self: center;
   overflow-x: hidden;
 
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
-    padding: 0 2.5rem;
+    padding: 0 2.5rem 5rem 2.5rem;
     margin-top: 5rem;
+    gap: 4rem;
   }
 `
 const LeaderCard = styled.div`
@@ -71,6 +72,7 @@ const LeaderCardDesc = styled.div`
 
     p {
       font-size: 1rem;
+      line-height: 2.5rem;
     }
   }
 `
@@ -90,6 +92,7 @@ const LeaderImgWrapper = styled.div`
     right: -15px;
     bottom: 0;
     border: 2px solid ${({ borderColor }) => theme[borderColor]};
+    border-radius: 5px;
   }
 
   img {
