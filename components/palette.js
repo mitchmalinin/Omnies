@@ -7,6 +7,7 @@ export const theme = {
   white: "white",
   lightGrey: "#33322d",
   silver: "#c2c2c2",
+  green: "#00b026",
 }
 
 export const sizes = {

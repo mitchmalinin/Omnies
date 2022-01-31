@@ -55,8 +55,8 @@ const Phase = styled.div`
     content: "";
     width: 30px;
     height: 30px;
-    border: 3px solid ${theme.red};
-    background: ${theme.red};
+    border: 3px solid ${({ done }) => (done ? theme.green : theme.red)};
+    background: ${({ done }) => (done ? theme.green : theme.red)};
     border-radius: 50%;
     position: absolute;
     top: 10%;
@@ -65,7 +65,8 @@ const Phase = styled.div`
   }
 
   &:hover:before {
-    background-color: ${Color(theme.red).alpha(0.5)};
+    background-color: ${({ done }) =>
+      done ? Color(theme.green).alpha(0.5) : Color(theme.red).alpha(0.5)};
   }
 
   &:hover {
@@ -76,11 +77,11 @@ const Phase = styled.div`
 const RoadmapDesktop = () => (
   <RoadmapDesktopContentWrapper>
     <PhaseWrapper>
-      <Phase>
+      <Phase done>
         <a data-tip data-for="phase1">
           Phase 1
         </a>
-        <Tooltip id="phase1" effect="solid">
+        <Tooltip id="phase1" effect="solid" done>
           <span>
             We believe that a faction is only as strong as its weakest link. We
             will be searching far and wide for those worthy of attaining the
