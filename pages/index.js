@@ -143,6 +143,10 @@ const HeroInnerContentWrapper = styled.div`
   grid-auto-rows: min-content;
   gap: 2rem;
   justify-items: center;
+
+  a {
+    text-decoration: none;
+  }
 `
 
 const HeroTitle = styled.h1`
@@ -221,6 +225,16 @@ const SocialsContentWrapper = styled.div`
   }
 `
 
+const SocialContentInnerWrapper = styled.div`
+  display: grid;
+  gap: 3rem;
+  width: 50%;
+
+  a {
+    text-decoration: none;
+  }
+`
+
 export default function Home() {
   return (
     <Wrapper>
@@ -259,7 +273,13 @@ export default function Home() {
           <HeroInnerContentWrapper>
             <HeroTitle>Omnia</HeroTitle>
             <HeroSubtitle>REALM OF THE OMNIES</HeroSubtitle>
-            <WorthyButton>Are You Worthy?</WorthyButton>
+            <a
+              href="https://discord.gg/sCcQ3x54"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <WorthyButton>Are You Worthy?</WorthyButton>
+            </a>
           </HeroInnerContentWrapper>
           <HeroSocials>
             <SocialsIcons row />
@@ -276,7 +296,16 @@ export default function Home() {
         <Socials>
           <SectionTitle id="socials">Socials</SectionTitle>
           <SocialsContentWrapper>
-            <p>Need a cool slogan here</p>
+            <SocialContentInnerWrapper>
+              <p>Are you worthy enough to wield the power of an Omnie.</p>
+              <a
+                href="https://discord.gg/sCcQ3x54"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <WorthyButton>Enter to find out</WorthyButton>
+              </a>
+            </SocialContentInnerWrapper>
             <SocialsIcons />
           </SocialsContentWrapper>
         </Socials>

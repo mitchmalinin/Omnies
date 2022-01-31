@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { theme } from "../palette"
 import Color from "color"
 
-const SocialIconWrapper = styled.div`
+const SocialIconWrapper = styled.a`
   display: grid;
   place-items: center;
   width: 3.2rem;
@@ -12,6 +12,7 @@ const SocialIconWrapper = styled.div`
   position: relative;
   color: ${theme.white};
   cursor: pointer;
+  text-decoration: none;
 
   i {
     z-index: 999;
@@ -53,10 +54,18 @@ const SocialsWrapper = styled.div`
 const SocialsIcons = ({ row }) => {
   return (
     <SocialsWrapper row={row}>
-      <SocialIconWrapper>
+      <SocialIconWrapper
+        href="https://discord.gg/sCcQ3x54"
+        target="_blank"
+        rel="noreferrer"
+      >
         <i className="fab fa-discord"></i>
       </SocialIconWrapper>
-      <SocialIconWrapper>
+      <SocialIconWrapper
+        href="https://twitter.com/TheOmnies"
+        target="_blank"
+        rel="noreferrer"
+      >
         <i className="fab fa-twitter"></i>
       </SocialIconWrapper>
     </SocialsWrapper>

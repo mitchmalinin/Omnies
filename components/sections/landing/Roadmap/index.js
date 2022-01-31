@@ -7,9 +7,9 @@ import {
   ContentWrapper,
   FakeAnchor,
 } from "../../../layout/SharedComponents"
-import useWindowDimensions from "../../../utils/hooks/useIsMobile"
 import useIsMobile from "../../../utils/hooks/useIsMobile"
 import RoadmapMobile from "./RoadmapMobile"
+import RoadmapDesktop from "./RoadmapDesktop"
 
 const RoadMapContentWrapper = styled(ContentWrapper)`
   background-image: url("/images/dividers/3.png"), url("/images/dividers/5.png");
@@ -55,7 +55,7 @@ const Roadmap = () => {
       <RoadMapOuterWrapper>
         <SectionTitle textAlignEnd>Roadmap</SectionTitle>
         <RoadmapWrapper isMobile={isMobile}>
-          {isMobile ? <RoadmapMobile /> : <div>Not Mobile</div>}
+          {isMobile ? <RoadmapMobile /> : <RoadmapDesktop />}
         </RoadmapWrapper>
       </RoadMapOuterWrapper>
     </RoadMapContentWrapper>

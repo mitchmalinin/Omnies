@@ -35,6 +35,7 @@ function MyApp({ Component, pageProps }) {
          `,
           }}
         />
+        <meta property="og:image" content="/images/link-preview.png" />
       </Head>
       <Component {...pageProps} />
     </>

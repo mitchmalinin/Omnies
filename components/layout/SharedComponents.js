@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { theme } from "../palette"
 import Color from "color"
+import ReactTooltip from "react-tooltip"
 
 export const SectionTitle = styled.h2`
   font-size: 3rem;
@@ -58,4 +59,14 @@ export const ContentWrapper = styled.div`
 export const FakeAnchor = styled.section`
   position: absolute;
   top: -80px;
+`
+
+export const Tooltip = styled(ReactTooltip)`
+  width: 300px !important;
+  padding: 1rem !important;
+  border: 3px solid ${theme.red} !important;
+  background-color: ${Color(theme.red).alpha(0.95)} !important;
+  font-size: 1.2rem !important;
+  border-top-color: ${theme.red} !important;
+  color: ${theme.white} !important;
 `

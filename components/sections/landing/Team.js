@@ -13,14 +13,14 @@ const Wrapper = styled.div`
   width: 100%;
   display: grid;
   grid-auto-rows: min-content;
-  padding: 5rem 5.5rem;
+  padding: 3rem 5.5rem;
   max-width: ${sizes.maxWidth};
   align-self: center;
   overflow-x: hidden;
   background: ${theme.lightGrey};
 
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
-    padding: 0 2.5rem;
+    padding: 0rem 2.5rem 2rem 2.5rem;
     margin-top: 5rem;
   }
 `
@@ -28,7 +28,7 @@ const Wrapper = styled.div`
 const TeamMembersWrapper = styled.div`
   display: grid;
   margin-top: 5rem;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 5rem;
 
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
@@ -52,9 +52,13 @@ const TeamMemberNameWrapper = styled.div`
   font-size: 1.5rem;
   color: ${theme.white};
   a {
-    color: ${theme.teal};
+    color: ${theme.white};
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    transition: all 0.2s ease-in;
+    &:hover {
+      color: ${theme.teal};
+    }
   }
 `
 
@@ -65,7 +69,12 @@ const TeamMember = styled.div`
 `
 
 const MemberRoleWrapper = styled.p`
-  color: ${theme.silver};
+  color: ${theme.yellow};
+  line-height: 1.7rem;
+
+  &:last-child {
+    color: ${theme.silver};
+  }
 `
 
 const Team = () => {
@@ -83,11 +92,16 @@ const Team = () => {
                 </TeamMemberImgWrapper>
                 <TeamMemberNameWrapper>
                   <p>{member.name}</p>
-                  <a href={member.twitter} target="_blank" rel="noreferrer">
+                  <a
+                    href={`https://twitter.com/${member.twitter}`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <i className="fab fa-twitter"></i>
                   </a>
                 </TeamMemberNameWrapper>
                 <MemberRoleWrapper>{member.role}</MemberRoleWrapper>
+                <MemberRoleWrapper>{member.subRole}</MemberRoleWrapper>
               </TeamMember>
             )
           })}
