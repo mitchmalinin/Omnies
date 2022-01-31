@@ -38,14 +38,11 @@ const MoreLoreCardsWrapper = styled.div`
   z-index: 3;
   justify-self: center;
   gap: 3rem;
-  /* max-width: 900px; */
 
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     margin-top: 5rem;
-  }
-
-  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
 `
 
@@ -79,9 +76,9 @@ const MoreLoreCard = styled.div`
   }
 
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
-    width: 300px;
-    height: 300px;
-    font-size: 2rem;
+    width: 270px;
+    height: 270px;
+    font-size: 1.8rem;
   }
 `
 
