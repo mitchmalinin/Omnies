@@ -9,6 +9,7 @@ export const SectionTitle = styled.h2`
   z-index: 4;
   position: relative;
   text-align: ${({ textAlignEnd }) => (textAlignEnd ? "end" : "start")};
+  ${({ lessMarginBottom }) => lessMarginBottom && "margin-bottom: -50px;"}
 
   &:before {
     content: "";
@@ -23,6 +24,8 @@ export const SectionTitle = styled.h2`
 
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     font-size: 2.4rem;
+    ${({ lessMarginBottom }) => lessMarginBottom && "margin-bottom: 20px;"}
+
     &:before {
       ${({ textAlignEnd }) =>
         textAlignEnd ? "right: -9.1rem" : "left: -9.1rem"};

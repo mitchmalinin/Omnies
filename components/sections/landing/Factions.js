@@ -21,7 +21,7 @@ const FactionsWrapper = styled.div`
   display: grid;
   grid-auto-rows: min-content;
   gap: 5rem;
-  padding: 7rem 5.5rem 9rem 5.5rem;
+  padding: 7rem 6rem 9rem 6rem;
   max-width: ${sizes.maxWidth};
   align-self: center;
   overflow-x: hidden;
@@ -117,7 +117,9 @@ const Factions = () => {
   return (
     <FactionsContentWrapper backgroundColor="grey">
       <FactionsWrapper>
-        <SectionTitle textAlignEnd>The Four Factions</SectionTitle>
+        <SectionTitle textAlignEnd lessMarginBottom>
+          The Four Factions
+        </SectionTitle>
         <LeaderCard>
           <LeaderImgWrapper borderColor="yellow">
             <img src="/images/heroics.png" />

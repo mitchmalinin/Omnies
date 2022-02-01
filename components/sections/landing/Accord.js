@@ -23,7 +23,7 @@ const AccordWrapper = styled.div`
   width: 100%;
   z-index: 5;
   gap: 3rem;
-  padding: 5rem 5.5rem 13rem 5.5rem;
+  padding: 5rem 6rem 13rem 6rem;
   max-width: ${sizes.maxWidth};
   align-self: center;
   overflow-x: hidden;

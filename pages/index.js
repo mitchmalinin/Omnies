@@ -88,6 +88,10 @@ const NavItemsWrapper = styled.ul`
     text-decoration: none;
     color: ${theme.white};
   }
+
+  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
+    display: none;
+  }
 `
 
 const NavItem = styled.li`
@@ -111,6 +115,10 @@ const NavItem = styled.li`
 
   &:hover:before {
     transform: scale(1, 1);
+  }
+
+  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
+    display: none;
   }
 `
 
@@ -299,7 +307,7 @@ export default function Home() {
         <Socials>
           <SocialsContentWrapper>
             <SocialContentInnerWrapper>
-              <p>Are you worthy enough to wield the power of an Omnie?</p>
+              <p>Are you worthy to wield the power of an Omnie?</p>
               <a
                 href="https://discord.gg/sCcQ3x54"
                 target="_blank"

@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   width: 100%;
   display: grid;
   grid-auto-rows: min-content;
-  padding: 3rem 5.5rem;
+  padding: 3rem 6rem;
   max-width: ${sizes.maxWidth};
   align-self: center;
   overflow-x: hidden;
@@ -33,7 +33,8 @@ const TeamMembersWrapper = styled.div`
   display: grid;
   margin-top: 5rem;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 5rem;
+  column-gap: 4rem;
+  row-gap: 3rem;
 
   @media only screen and (max-width: 991px) and (-webkit-min-device-pixel-ratio: 1.5) {
     grid-template-columns: 330px 330px;
