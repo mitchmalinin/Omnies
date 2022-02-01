@@ -30,7 +30,7 @@ const HeroWrapper = styled.div`
   background-image: url("../images/hero-desktop.png");
   background-size: cover;
   background-position: center;
-  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
     background-image: url("../images/hero-mobile.png");
   }
 `
@@ -57,7 +57,7 @@ const BorderDivider = styled.img`
   position: absolute;
   bottom: -60px;
   height: 150px;
-  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
     bottom: -63px;
   }
 `
@@ -75,7 +75,7 @@ const NavWrapper = styled.nav`
     color: ${theme.white};
     text-decoration: none;
   }
-  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
     display: none;
   }
 `
@@ -132,7 +132,7 @@ const HeroSocials = styled.div`
   top: 15vh;
   right: 50px;
 
-  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
     top: 0;
     right: 40px;
   }
@@ -155,7 +155,7 @@ const HeroTitle = styled.h1`
   font-size: 10rem;
   color: ${theme.yellow};
 
-  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
     font-size: 7rem;
   }
 `
@@ -163,7 +163,7 @@ const HeroTitle = styled.h1`
 const HeroSubtitle = styled.h2`
   font-size: 3rem;
 
-  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
     font-size: 2rem;
   }
 `
@@ -179,13 +179,17 @@ const HeroGodsImgWrapper = styled.div`
 `
 
 const Footer = styled.div`
-  padding: 10rem 0 4rem 0;
+  padding: 6rem 0 4rem 0;
   height: 100px;
   width: 100%;
   display: grid;
   place-items: center;
   background-color: ${theme.lightGrey};
   color: ${theme.silver};
+
+  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
+    padding: 5rem 0 5rem 0;
+  }
 `
 
 const Socials = styled.div`
@@ -198,7 +202,7 @@ const Socials = styled.div`
   align-self: center;
   overflow-x: hidden;
   background-color: ${theme.lightGrey};
-  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
     padding: 0 2.5rem;
     margin-top: 5rem;
   }
@@ -208,14 +212,13 @@ const SocialsContentWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-top: 5rem;
 
   p {
     font-size: 2.5rem;
     color: ${theme.white};
   }
 
-  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
     flex-direction: column;
     padding-bottom: 2rem;
 
@@ -294,16 +297,15 @@ export default function Home() {
       <Roadmap />
       <ContentWrapper backgroundColor="lightGrey">
         <Socials>
-          <SectionTitle id="socials">Socials</SectionTitle>
           <SocialsContentWrapper>
             <SocialContentInnerWrapper>
-              <p>Are you worthy enough to wield the power of an Omnie.</p>
+              <p>Are you worthy enough to wield the power of an Omnie?</p>
               <a
                 href="https://discord.gg/sCcQ3x54"
                 target="_blank"
                 rel="noreferrer"
               >
-                <WorthyButton>Enter to find out</WorthyButton>
+                <WorthyButton>Test Your Luck</WorthyButton>
               </a>
             </SocialContentInnerWrapper>
             <SocialsIcons />

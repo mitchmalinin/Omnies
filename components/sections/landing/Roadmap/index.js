@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 import { theme, sizes } from "../../../palette"
 import {
@@ -29,6 +29,10 @@ const RoadMapOuterWrapper = styled.div`
   align-self: center;
   overflow-x: hidden;
   gap: 3rem;
+
+  @media only screen and (max-width: 991px) and (-webkit-min-device-pixel-ratio: 1.5) {
+    padding: 5rem 2.5rem 11rem 2.5rem;
+  }
 
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     padding: 0 2.5rem 6.5rem 2.5rem;

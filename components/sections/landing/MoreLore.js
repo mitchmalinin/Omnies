@@ -2,7 +2,11 @@ import React from "react"
 import styled from "styled-components"
 import { theme, sizes } from "../../palette"
 import Color from "color"
-import { SectionTitle, FakeAnchor } from "../../layout/SharedComponents"
+import {
+  SectionTitle,
+  FakeAnchor,
+  Tooltip,
+} from "../../layout/SharedComponents"
 
 const MoreLoreWrapper = styled.section`
   position: relative;
@@ -26,6 +30,10 @@ const MoreLoreInnerWrapper = styled.div`
   padding: 3rem 5.5rem 9rem 5.5rem;
   width: 100%;
 
+  @media only screen and (max-width: 991px) and (-webkit-min-device-pixel-ratio: 1.5) {
+    padding: 3rem 2.5rem 9rem 2.5rem;
+  }
+
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     padding: 5rem 2.5rem 6rem 2.5rem;
     gap: 0rem;
@@ -38,6 +46,10 @@ const MoreLoreCardsWrapper = styled.div`
   z-index: 3;
   justify-self: center;
   gap: 3rem;
+
+  @media only screen and (max-width: 991px) and (-webkit-min-device-pixel-ratio: 1.5) {
+    gap: 1rem;
+  }
 
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     margin-top: 5rem;
@@ -75,6 +87,12 @@ const MoreLoreCard = styled.div`
     transform: scale(1.01);
   }
 
+  @media only screen and (max-width: 991px) and (-webkit-min-device-pixel-ratio: 1.5) {
+    width: 250px;
+    height: 250px;
+    font-size: 1.8rem;
+  }
+
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     width: 270px;
     height: 270px;
@@ -88,7 +106,7 @@ const MoreLore = () => {
       <FakeAnchor id="history" />
       <MoreLoreInnerWrapper>
         <SectionTitle textAlignEnd>Lore</SectionTitle>
-        <MoreLoreCardsWrapper>
+        <MoreLoreCardsWrapper data-tip data-for="more-lore">
           <MoreLoreCard>
             <p>The Imprisoned Deities</p>
           </MoreLoreCard>
@@ -98,6 +116,9 @@ const MoreLore = () => {
           <MoreLoreCard>
             <p>The Great Omniwar</p>
           </MoreLoreCard>
+          <Tooltip id="more-lore" effect="solid" lore>
+            <span>COMING SOON...</span>
+          </Tooltip>
         </MoreLoreCardsWrapper>
       </MoreLoreInnerWrapper>
     </MoreLoreWrapper>

@@ -19,7 +19,11 @@ const Wrapper = styled.div`
   overflow-x: hidden;
   background: ${theme.lightGrey};
 
-  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 991px) and (-webkit-min-device-pixel-ratio: 1.5) {
+    padding: 3rem 2.5rem 2rem 2.5rem;
+  }
+
+  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
     padding: 0rem 2.5rem 2rem 2.5rem;
     margin-top: 5rem;
   }
@@ -31,7 +35,14 @@ const TeamMembersWrapper = styled.div`
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 5rem;
 
-  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 991px) and (-webkit-min-device-pixel-ratio: 1.5) {
+    grid-template-columns: 330px 330px;
+    justify-content: center;
+    column-gap: 6rem;
+    row-gap: 4rem;
+  }
+
+  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
     grid-template-columns: 1fr;
     gap: 3rem;
   }

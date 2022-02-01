@@ -3,6 +3,8 @@ import { useState, useEffect } from "react"
 const getIsMobile = () => {
   if (typeof window !== "undefined") {
     return window.innerWidth <= 768
+  } else {
+    return true
   }
 }
 

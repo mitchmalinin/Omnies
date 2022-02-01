@@ -26,13 +26,7 @@ const RoadMapItem = styled.div`
   p {
     color: ${theme.white};
     line-height: 2.1rem;
-    font-size: 1.2rem;
-  }
-
-  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
-    p {
-      font-size: 1rem;
-    }
+    font-size: 1rem;
   }
 `
 

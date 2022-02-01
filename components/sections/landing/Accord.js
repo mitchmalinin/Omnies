@@ -27,13 +27,18 @@ const AccordWrapper = styled.div`
   max-width: ${sizes.maxWidth};
   align-self: center;
   overflow-x: hidden;
-  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+
+  @media only screen and (max-width: 991px) and (-webkit-min-device-pixel-ratio: 1.5) {
+    padding: 4rem 5.5rem 9rem 5.5rem;
+  }
+
+  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
     padding: 4rem 2.5rem;
   }
 `
 
 const AccordDesc = styled.div`
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: ${theme.silver};
   line-height: 3rem;
 
@@ -45,7 +50,11 @@ const AccordDesc = styled.div`
     margin-top: -2.5rem;
   }
 
-  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 991px) and (-webkit-min-device-pixel-ratio: 1.5) {
+    font-size: 1.2rem;
+  }
+
+  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
     font-size: 1rem;
     line-height: 2.5rem;
   }

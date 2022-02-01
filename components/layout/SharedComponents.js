@@ -62,7 +62,7 @@ export const FakeAnchor = styled.section`
 `
 
 export const Tooltip = styled(ReactTooltip)`
-  width: 300px !important;
+  width: ${({ lore }) => (lore ? "200px" : "300px")} !important;
   padding: 1rem !important;
   border: 3px solid ${({ done }) => (done ? theme.green : theme.red)} !important;
   background-color: ${({ done }) =>
@@ -72,4 +72,6 @@ export const Tooltip = styled(ReactTooltip)`
   font-size: 1.2rem !important;
   /* border-top-color: ${theme.red} !important; */
   color: ${theme.white} !important;
+  ${({ lore }) => lore && "margin-top: -50px !important;"}
+  ${({ lore }) => lore && "text-align: center !important;"}
 `

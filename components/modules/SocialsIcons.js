@@ -6,8 +6,8 @@ import Color from "color"
 const SocialIconWrapper = styled.a`
   display: grid;
   place-items: center;
-  width: 3.2rem;
-  height: 3.2rem;
+  width: 3rem;
+  height: 3rem;
   font-size: 1.2rem;
   position: relative;
   color: ${theme.white};
@@ -34,10 +34,10 @@ const SocialIconWrapper = styled.a`
     background-color: ${theme.yellow};
   }
 
-  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
-    font-size: 1.2rem;
-    width: 3rem;
-    height: 3rem;
+  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
+    font-size: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
   }
 `
 const SocialsWrapper = styled.div`
@@ -46,8 +46,10 @@ const SocialsWrapper = styled.div`
     row ? "min-content" : "min-content min-content"};
   gap: 3rem;
 
-  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
-    margin-top: 3rem;
+  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
+    margin-top: 5rem;
+    margin-left: 10px;
+    gap: 2rem;
   }
 `
 
