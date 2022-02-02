@@ -52,7 +52,7 @@ const RoadmapWrapper = styled.div`
 
 const Roadmap = () => {
   const isMobile = useIsMobile()
-
+  console.log("test", isMobile)
   return (
     <RoadMapContentWrapper backgroundColor="grey">
       <FakeAnchor id="roadmap" />

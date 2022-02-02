@@ -1,27 +1,33 @@
 import { useState, useEffect } from "react"
 
-const getIsMobile = () => {
-  if (typeof window !== "undefined") {
-    return window.innerWidth <= 768
-  } else {
-    return true
-  }
-}
-
-export default function useIsMobile() {
-  const [isMobile, setIsMobile] = useState(getIsMobile())
+// Hook
+const useIsMobile = () => {
+  // Initialize state with undefined width/height so server and client renders match
+  // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
+  const [width, setWidth] = useState({
+    width: undefined,
+  })
 
   useEffect(() => {
-    const onResize = () => {
-      setIsMobile(getIsMobile())
+    // only execute all the code below in client side
+    if (typeof window !== "undefined") {
+      // Handler to call on window resize
+      function handleResize() {
+        // Set window width/height to state
+        setWidth(window.innerWidth)
+      }
+
+      // Add event listener
+      window.addEventListener("resize", handleResize)
+
+      // Call handler right away so state gets updated with initial window size
+      handleResize()
+
+      // Remove event listener on cleanup
+      return () => window.removeEventListener("resize", handleResize)
     }
-
-    window.addEventListener("resize", onResize)
-
-    return () => {
-      window.removeEventListener("resize", onResize)
-    }
-  }, [])
-
-  return isMobile
+  }, []) // Empty array ensures that effect is only run on mount
+  return width <= 768
 }
+
+export default useIsMobile
