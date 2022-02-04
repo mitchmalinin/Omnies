@@ -59,7 +59,8 @@ export const teamMembers = [
     name: "DillyDilly",
     twitter: "dillydilly_eth",
     role: "Project Advisor",
-    subRole: "",
+    subRole:
+      "Although outsiders are seldom worthy of a seat among the Omnies, Dillydilly has proved himself as an invaluable advisor to the council and the realm by advising the council on project development",
     img: "/images/teamimgs/dillydilly.png",
   },
 ]

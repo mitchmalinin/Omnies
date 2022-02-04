@@ -111,6 +111,17 @@ const LeaderImgWrapper = styled.div`
     width: 100%;
     position: relative;
   }
+
+  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
+    &:before {
+      width: 105%;
+      right: 0px;
+    }
+
+    img {
+      width: 95%;
+    }
+  }
 `
 
 const Factions = () => {

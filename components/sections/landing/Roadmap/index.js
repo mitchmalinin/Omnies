@@ -12,19 +12,14 @@ import RoadmapMobile from "./RoadmapMobile"
 import RoadmapDesktop from "./RoadmapDesktop"
 
 const RoadMapContentWrapper = styled(ContentWrapper)`
-  background-image: url("/images/dividers/3.png"), url("/images/dividers/5.png");
-  background-position: 50% 100%, 50% 0%;
-  background-size: contain, contain;
-  background-repeat: no-repeat, no-repeat;
-  background-attachment: scroll, scroll;
-  position: relative;
+  background-color: ${theme.lightGrey};
 `
 
 const RoadMapOuterWrapper = styled.div`
   width: 100%;
   display: grid;
   grid-auto-rows: min-content;
-  padding: 5rem 5.5rem 14.5rem 5.5rem;
+  padding: 5rem 5.5rem 5rem 5.5rem;
   max-width: ${sizes.maxWidth};
   align-self: center;
   overflow-x: hidden;
@@ -52,7 +47,6 @@ const RoadmapWrapper = styled.div`
 
 const Roadmap = () => {
   const isMobile = useIsMobile()
-  console.log("test", isMobile)
   return (
     <RoadMapContentWrapper backgroundColor="grey">
       <FakeAnchor id="roadmap" />

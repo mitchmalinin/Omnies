@@ -2,11 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import { theme, sizes } from "../../palette"
 import Color from "color"
-import {
-  SectionTitle,
-  FakeAnchor,
-  Tooltip,
-} from "../../layout/SharedComponents"
+import { SectionTitle, FakeAnchor } from "../../layout/SharedComponents"
+import Link from "next/link"
 
 const MoreLoreWrapper = styled.section`
   position: relative;
@@ -35,26 +32,28 @@ const MoreLoreInnerWrapper = styled.div`
   }
 
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
-    padding: 5rem 2.5rem 6rem 2.5rem;
+    padding: 2rem 2rem 5rem 2rem;
     gap: 0rem;
   }
 `
 
 const MoreLoreCardsWrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   z-index: 3;
   justify-self: center;
   gap: 3rem;
 
   @media only screen and (max-width: 991px) and (-webkit-min-device-pixel-ratio: 1.5) {
-    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
   }
 
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
-    margin-top: 5rem;
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
+    margin-top: 3rem;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1.3rem;
+    column-gap: 1rem;
   }
 `
 
@@ -63,7 +62,7 @@ const MoreLoreCard = styled.div`
   padding: 1rem;
   height: 250px;
   color: #040200a3;
-  font-size: 2rem;
+  font-size: 1.8rem;
   word-spacing: unset;
   display: table-caption;
   transition: all 0.15s ease-in;
@@ -72,8 +71,8 @@ const MoreLoreCard = styled.div`
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  width: 300px;
-  height: 300px;
+  width: 270px;
+  height: 270px;
   display: grid;
   place-items: center;
 
@@ -94,31 +93,39 @@ const MoreLoreCard = styled.div`
   }
 
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
-    width: 270px;
-    height: 270px;
-    font-size: 1.8rem;
+    width: 150px;
+    height: 150px;
+    font-size: 1rem;
   }
 `
 
 const MoreLore = () => {
   return (
-    <MoreLoreWrapper id="history">
-      <FakeAnchor id="history" />
+    <MoreLoreWrapper id="lore">
+      <FakeAnchor id="lore" />
       <MoreLoreInnerWrapper>
         <SectionTitle textAlignEnd>Lore</SectionTitle>
-        <MoreLoreCardsWrapper data-tip data-for="more-lore">
+        <MoreLoreCardsWrapper>
           <MoreLoreCard>
-            <p>The Imprisoned Deities</p>
+            <Link href="/omnia-accord">
+              <p>The Omnia Accord</p>
+            </Link>
           </MoreLoreCard>
           <MoreLoreCard>
-            <p>Infernals Uprising</p>
+            <Link href="/imprisoned-deities">
+              <p>The Imprisoned Deities</p>
+            </Link>
           </MoreLoreCard>
           <MoreLoreCard>
-            <p>The Great Omniwar</p>
+            <Link href="/infernals-uprising">
+              <p>Infernals Uprising</p>
+            </Link>
           </MoreLoreCard>
-          <Tooltip id="more-lore" effect="solid" lore>
-            <span>COMING SOON...</span>
-          </Tooltip>
+          <MoreLoreCard>
+            <Link href="/great-omniwar">
+              <p>The Great Omniwar</p>
+            </Link>
+          </MoreLoreCard>
         </MoreLoreCardsWrapper>
       </MoreLoreInnerWrapper>
     </MoreLoreWrapper>

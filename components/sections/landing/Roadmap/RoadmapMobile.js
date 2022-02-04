@@ -4,7 +4,7 @@ import { theme } from "../../../palette"
 const RoadmapContentInnnerWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  margin-top: 5rem;
+  margin-top: 3rem;
   gap: 3rem;
 `
 
@@ -28,6 +28,10 @@ const RoadMapItem = styled.div`
     line-height: 2.1rem;
     font-size: 1rem;
   }
+
+  .bold {
+    color: ${theme.yellow};
+  }
 `
 
 const RoadmapMobile = () => {
@@ -45,17 +49,17 @@ const RoadmapMobile = () => {
       <RoadMapItem>
         <h2>Phase 2</h2>
         <p>
-          Launch of 200 Genesis Omnies - Each Genesis Omnie will earn three
-          Deities and three Weapons during a later Phase (50 Atlins, 50 Heroics,
-          50 Mystics, 50 Infernals)
+          Launch of 200 Genesis Omnies - Each Genesis Omnie will earn rewards in
+          various Metaverse related applications during a later Phase (50
+          Atlins, 50 Heroics, 50 Mystics, 50 Infernals)
         </p>
       </RoadMapItem>
       <RoadMapItem>
         <h2>Phase 3</h2>
         <p>
           Launch of 8,888 Generative Omnies - Each Generative Omnie will earn
-          one Deitie and one Weapon during a later phase (2,222 Atlins, 2,222
-          Heroics, 2,222 Mystics, 2,222 Infernals)
+          rewards in various Metaverse related applications during a later phase
+          (2,222 Atlins, 2,222 Heroics, 2,222 Mystics, 2,222 Infernals)
         </p>
       </RoadMapItem>
       <RoadMapItem>
@@ -70,27 +74,30 @@ const RoadmapMobile = () => {
         <h2>Phase 5</h2>
         <p>
           Without a weapon the Deities can not be defeated and the war is lost.
-          All holders will get a 3D weapon to be used in NFT Lands and a Deity
-          (3 Weapons and Deities air dropped per Genesis Omnie, 1 Weapon and
-          Deity air dropped per Generative Omnie)
+          All holders will get a 3D weapon to be used in the metaverse as well
+          as a Deity.{" "}
+          <span className="bold">
+            Owning a Genesis Omnie will generate a reward multiplier.
+          </span>
         </p>
       </RoadMapItem>
       <RoadMapItem>
         <h2>Phase 6</h2>
         <p>
           Launch of The Omnia Store to facilitate the sale of merchandise,
-          weapons and accessories to be used in NFT Lands
+          weapons and accessories to be used in Metaverse applications.
         </p>
       </RoadMapItem>
       <RoadMapItem>
         <h2>Phase 7</h2>
         <p>
           As the Cabin deep in the woods shakes Omnia appears. Our focus will be
-          on the development of the five realms of Omnia in NFT Worlds. The
-          realms will include the Enchanted Forest, The Mainland, The Forgotten
-          Realm, The Trenches, and the Gates of Tartarus. Access to each realm
-          will be based on your Omnie Faction. We will also enlist full 3D
-          versions of our Omnies to be used in NFT Lands
+          on the development and integration of the five realms of Omnia into
+          the Metaverse. The realms will include the Enchanted Forest, The
+          Mainland, The Forgotten Realm, The Trenches, and the Gates of
+          Tartarus. Access to each realm will be based on your Omnie Faction. We
+          will also enlist full 3D versions of our Omnies to be used in various
+          Metaverse applications.
         </p>
       </RoadMapItem>
     </RoadmapContentInnnerWrapper>

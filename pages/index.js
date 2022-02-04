@@ -6,7 +6,7 @@ import Color from "color"
 import Roadmap from "../components/sections/landing/Roadmap"
 import Factions from "../components/sections/landing/Factions"
 import MoreLore from "../components/sections/landing/MoreLore"
-import Accord from "../components/sections/landing/Accord"
+import About from "../components/sections/landing/About"
 import Team from "../components/sections/landing/Team"
 import {
   SectionTitle,
@@ -269,8 +269,8 @@ export default function Home() {
             <a href="#about">
               <NavItem>ABOUT</NavItem>
             </a>
-            <a href="#history">
-              <NavItem>HISTORY</NavItem>
+            <a href="#lore">
+              <NavItem>LORE</NavItem>
             </a>
             <a href="#team">
               <NavItem>TEAM</NavItem>
@@ -298,11 +298,11 @@ export default function Home() {
         </HeroContentWrapper>
         <BorderDivider src="/images/dividers/top.png" />
       </HeroWrapper>
-      <Accord />
+      <About />
       <MoreLore />
       <Factions />
-      <Team />
       <Roadmap />
+      <Team />
       <ContentWrapper backgroundColor="lightGrey">
         <Socials>
           <SocialsContentWrapper>

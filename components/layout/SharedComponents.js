@@ -49,6 +49,9 @@ export const MoreButton = styled.button`
   &:hover {
     background: ${({ backgroundColor }) => theme[backgroundColor]};
   }
+  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
+    align-self: flex-end;
+  }
 `
 
 export const ContentWrapper = styled.div`
@@ -77,4 +80,62 @@ export const Tooltip = styled(ReactTooltip)`
   color: ${theme.white} !important;
   ${({ lore }) => lore && "margin-top: -50px !important;"}
   ${({ lore }) => lore && "text-align: center !important;"}
+
+  span.bold {
+    color: ${theme.grey} !important;
+  }
+`
+
+export const LoreWrapper = styled.div`
+  background-color: ${theme.grey};
+  padding: 5rem;
+  min-height: 100vh;
+
+  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
+    padding: 2rem 2.5rem 5rem 2.5rem;
+  }
+`
+
+export const LoreTitle = styled.div`
+  color: ${theme.yellow};
+  font-size: 2rem;
+  margin-bottom: 3rem;
+`
+
+export const LoreDesc = styled.div`
+  color: ${theme.silver};
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+
+  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
+    font-size: 1.1rem;
+  }
+`
+
+export const LoreInnerContentWrapper = styled.div`
+  display: grid;
+  gap: 1rem;
+  margin-top: 3rem;
+`
+
+export const LoreHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+  }
+
+  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
+    flex-direction: column-reverse;
+  }
+`
+
+export const LoreBackButton = styled(MoreButton)`
+  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
+    align-self: flex-end;
+    margin-bottom: 2rem;
+    padding: 0.5rem 1rem;
+  }
 `
