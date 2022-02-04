@@ -30,7 +30,7 @@ const FactionsWrapper = styled.div`
     padding: 7rem 3rem 7rem 3rem;
   }
 
-  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 480px) {
     padding: 0 2.5rem 5rem 2.5rem;
     margin-top: 5rem;
     gap: 4rem;
@@ -72,7 +72,7 @@ const LeaderCardDesc = styled.div`
     }
   }
 
-  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 480px) {
     margin: 0;
 
     h3 {
@@ -112,7 +112,7 @@ const LeaderImgWrapper = styled.div`
     position: relative;
   }
 
-  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 480px) {
     &:before {
       width: 105%;
       right: 0px;

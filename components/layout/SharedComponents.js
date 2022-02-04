@@ -49,7 +49,7 @@ export const MoreButton = styled.button`
   &:hover {
     background: ${({ backgroundColor }) => theme[backgroundColor]};
   }
-  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 480px) and (-webkit-device-pixel-ratio: 3) {
     align-self: flex-end;
   }
 `
@@ -91,7 +91,7 @@ export const LoreWrapper = styled.div`
   padding: 5rem;
   min-height: 100vh;
 
-  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 480px) and (-webkit-device-pixel-ratio: 3) {
     padding: 2rem 2.5rem 5rem 2.5rem;
   }
 `
@@ -107,7 +107,7 @@ export const LoreDesc = styled.div`
   font-size: 1.2rem;
   line-height: 2.5rem;
 
-  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 480px) and (-webkit-device-pixel-ratio: 3) {
     font-size: 1.1rem;
   }
 `
@@ -127,13 +127,13 @@ export const LoreHeader = styled.div`
     text-decoration: none;
   }
 
-  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 480px) and (-webkit-device-pixel-ratio: 3) {
     flex-direction: column-reverse;
   }
 `
 
 export const LoreBackButton = styled(MoreButton)`
-  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 480px) and (-webkit-device-pixel-ratio: 3) {
     align-self: flex-end;
     margin-bottom: 2rem;
     padding: 0.5rem 1rem;

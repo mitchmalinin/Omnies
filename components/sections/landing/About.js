@@ -32,7 +32,7 @@ const AboutWrapper = styled.div`
     padding: 4rem 5.5rem 9rem 5.5rem;
   }
 
-  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 480px) {
     padding: 4rem 2.5rem 5rem 2.5rem;
   }
 `
@@ -57,7 +57,7 @@ const AboutDesc = styled.div`
     font-size: 1.2rem;
   }
 
-  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 480px) {
     font-size: 1rem;
     line-height: 2.5rem;
   }

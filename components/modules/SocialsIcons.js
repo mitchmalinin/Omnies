@@ -34,7 +34,7 @@ const SocialIconWrapper = styled.a`
     background-color: ${theme.yellow};
   }
 
-  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 480px) {
     font-size: 1rem;
     width: 2.5rem;
     height: 2.5rem;
@@ -46,8 +46,8 @@ const SocialsWrapper = styled.div`
     row ? "min-content" : "min-content min-content"};
   gap: 3rem;
 
-  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
-    margin-top: 5rem;
+  @media only screen and (max-width: 480px) {
+    margin-top: -2rem;
     margin-left: 10px;
     gap: 2rem;
   }

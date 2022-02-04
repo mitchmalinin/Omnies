@@ -31,7 +31,7 @@ const Wrapper = styled.div`
     padding: 3rem 2.5rem 2rem 2.5rem;
   }
 
-  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 480px) {
     padding: 0rem 2.5rem 5rem 2.5rem;
     margin-top: 5rem;
   }
@@ -51,7 +51,7 @@ const TeamMembersWrapper = styled.div`
     row-gap: 4rem;
   }
 
-  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 480px) {
     grid-template-columns: 1fr;
     gap: 3rem;
     justify-items: center;
@@ -88,7 +88,7 @@ const TeamMember = styled.div`
   grid-auto-rows: min-content;
   gap: 1rem;
 
-  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 480px) {
     width: 90%;
   }
 `

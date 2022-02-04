@@ -30,7 +30,7 @@ const HeroWrapper = styled.div`
   background-image: url("../images/hero-desktop.png");
   background-size: cover;
   background-position: center;
-  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 480px) {
     background-image: url("../images/hero-mobile.png");
   }
 `
@@ -57,7 +57,7 @@ const BorderDivider = styled.img`
   position: absolute;
   bottom: -60px;
   height: 150px;
-  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 480px) {
     bottom: -63px;
   }
 `
@@ -75,7 +75,7 @@ const NavWrapper = styled.nav`
     color: ${theme.white};
     text-decoration: none;
   }
-  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 480px) {
     display: none;
   }
 `
@@ -89,7 +89,7 @@ const NavItemsWrapper = styled.ul`
     color: ${theme.white};
   }
 
-  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 480px) {
     display: none;
   }
 `
@@ -117,7 +117,7 @@ const NavItem = styled.li`
     transform: scale(1, 1);
   }
 
-  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 480px) {
     display: none;
   }
 `
@@ -140,7 +140,7 @@ const HeroSocials = styled.div`
   top: 15vh;
   right: 50px;
 
-  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 480px) and (-webkit-device-pixel-ratio: 2) {
     top: 0;
     right: 40px;
   }
@@ -163,7 +163,7 @@ const HeroTitle = styled.h1`
   font-size: 10rem;
   color: ${theme.yellow};
 
-  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 480px) {
     font-size: 7rem;
   }
 `
@@ -171,7 +171,7 @@ const HeroTitle = styled.h1`
 const HeroSubtitle = styled.h2`
   font-size: 3rem;
 
-  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 480px) {
     font-size: 2rem;
   }
 `
@@ -195,7 +195,7 @@ const Footer = styled.div`
   background-color: ${theme.lightGrey};
   color: ${theme.silver};
 
-  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 480px) {
     padding: 5rem 0 5rem 0;
   }
 `
@@ -210,7 +210,7 @@ const Socials = styled.div`
   align-self: center;
   overflow-x: hidden;
   background-color: ${theme.lightGrey};
-  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 480px) {
     padding: 0 2.5rem;
     margin-top: 5rem;
   }
@@ -226,7 +226,7 @@ const SocialsContentWrapper = styled.div`
     color: ${theme.white};
   }
 
-  @media only screen and (max-width: 390px) and (-webkit-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 480px) {
     flex-direction: column;
     padding-bottom: 2rem;
 
@@ -272,11 +272,11 @@ export default function Home() {
             <a href="#lore">
               <NavItem>LORE</NavItem>
             </a>
-            <a href="#team">
-              <NavItem>TEAM</NavItem>
-            </a>
             <a href="#roadmap">
               <NavItem>ROADMAP</NavItem>
+            </a>
+            <a href="#team">
+              <NavItem>TEAM</NavItem>
             </a>
           </NavItemsWrapper>
         </NavWrapper>
