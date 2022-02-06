@@ -28,7 +28,7 @@ const AboutWrapper = styled.div`
   align-self: center;
   overflow-x: hidden;
 
-  @media only screen and (max-width: 991px) and (-webkit-min-device-pixel-ratio: 1.5) {
+  @media only screen and (max-width: 991px) {
     padding: 4rem 5.5rem 9rem 5.5rem;
   }
 
@@ -53,7 +53,7 @@ const AboutDesc = styled.div`
     margin: 0 0.2rem;
   }
 
-  @media only screen and (max-width: 991px) and (-webkit-min-device-pixel-ratio: 1.5) {
+  @media only screen and (max-width: 991px) {
     font-size: 1.2rem;
   }
 
@@ -71,7 +71,7 @@ const About = () => {
         <SectionTitle>What are Omnies?</SectionTitle>
         <AboutContentInnerWrapper>
           <AboutDesc>
-            Omnies are a unique collection of <span> 250 Genesis </span> and{" "}
+            Omnies are a unique collection of <span> 200 Genesis </span> and{" "}
             <span> 8,888 Generative </span>
             Hand Drawn NFTs living on the Ethereum blockchain in Omnia, the
             realm of the Gods.

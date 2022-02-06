@@ -26,7 +26,7 @@ const FactionsWrapper = styled.div`
   align-self: center;
   overflow-x: hidden;
 
-  @media only screen and (max-width: 991px) and (-webkit-min-device-pixel-ratio: 1.5) {
+  @media only screen and (max-width: 991px) {
     padding: 7rem 3rem 7rem 3rem;
   }
 
@@ -40,7 +40,7 @@ const LeaderCard = styled.div`
   display: flex;
   align-items: flex-end;
 
-  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 480px) {
     flex-direction: ${({ mobileReverse }) =>
       mobileReverse ? "column-reverse" : "column"};
   }
@@ -65,7 +65,7 @@ const LeaderCardDesc = styled.div`
     line-height: 3rem;
   }
 
-  @media only screen and (max-width: 991px) and (-webkit-min-device-pixel-ratio: 1.5) {
+  @media only screen and (max-width: 991px) {
     p {
       font-size: 1rem;
       line-height: 2.3rem;

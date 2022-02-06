@@ -316,7 +316,7 @@ export default function Home() {
                 <WorthyButton>Test Your Luck</WorthyButton>
               </a>
             </SocialContentInnerWrapper>
-            <SocialsIcons />
+            <SocialsIcons moreMarginTop />
           </SocialsContentWrapper>
         </Socials>
       </ContentWrapper>

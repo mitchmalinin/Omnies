@@ -47,15 +47,15 @@ const SocialsWrapper = styled.div`
   gap: 3rem;
 
   @media only screen and (max-width: 480px) {
-    margin-top: -2rem;
+    margin-top: ${({ moreMarginTop }) => (moreMarginTop ? "3.5rem" : "-2rem")};
     margin-left: 10px;
     gap: 2rem;
   }
 `
 
-const SocialsIcons = ({ row }) => {
+const SocialsIcons = ({ row, moreMarginTop }) => {
   return (
-    <SocialsWrapper row={row}>
+    <SocialsWrapper row={row} moreMarginTop={moreMarginTop}>
       <SocialIconWrapper
         href="https://discord.gg/sCcQ3x54"
         target="_blank"
