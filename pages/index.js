@@ -140,7 +140,7 @@ const HeroSocials = styled.div`
   top: 15vh;
   right: 50px;
 
-  @media only screen and (max-width: 480px) and (-webkit-device-pixel-ratio: 2) {
+  @media only screen and (max-width: 480px) {
     top: 0;
     right: 40px;
   }
@@ -174,16 +174,6 @@ const HeroSubtitle = styled.h2`
   @media only screen and (max-width: 480px) {
     font-size: 2rem;
   }
-`
-
-const HeroGodsImgWrapper = styled.div`
-  position: absolute;
-  left: 50%;
-  bottom: 0%;
-  transform: translate(-50%, -5%);
-  text-align: center;
-  height: 400px;
-  width: 300px;
 `
 
 const Footer = styled.div`

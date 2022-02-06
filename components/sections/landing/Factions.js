@@ -151,11 +151,11 @@ const Factions = () => {
             <h3>Infernals</h3>
             <p>
               The Infernals are a crude race with a fierce desire to rule Omnia
-              and enslave the other. Possessing extreme strength and the power
-              to control fire and earth the Infernals initiated the Great
-              Omniwar. After 100 years of fighting the Infernals were vanquished
-              into the forgotten realm 10,000 years ago following the Great
-              Omniwar.
+              and gain sovereignty across the realm. Possessing extreme strength
+              and the power to control fire and earth the Infernals initiated
+              the Great Omniwar. After 100 years of fighting the Infernals were
+              vanquished into the forgotten realm 10,000 years ago following the
+              Great Omniwar.
             </p>
             {/* <MoreButton backgroundColor="red">More</MoreButton> */}
           </LeaderCardDesc>
