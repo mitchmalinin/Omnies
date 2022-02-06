@@ -13,7 +13,7 @@ const MoreLoreWrapper = styled.section`
   justify-items: flex-end;
   overflow: hidden;
 
-  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 480px) {
     grid-template-columns: 1fr;
   }
 `
@@ -27,11 +27,11 @@ const MoreLoreInnerWrapper = styled.div`
   padding: 3rem 5.5rem 9rem 5.5rem;
   width: 100%;
 
-  @media only screen and (max-width: 991px) and (-webkit-min-device-pixel-ratio: 1.5) {
+  @media only screen and (max-width: 991px) {
     padding: 3rem 2.5rem 9rem 2.5rem;
   }
 
-  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 480px) {
     padding: 2rem 2rem 5rem 2rem;
     gap: 0rem;
   }
@@ -44,12 +44,12 @@ const MoreLoreCardsWrapper = styled.div`
   justify-self: center;
   gap: 3rem;
 
-  @media only screen and (max-width: 991px) and (-webkit-min-device-pixel-ratio: 1.5) {
+  @media only screen and (max-width: 991px) {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
   }
 
-  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 480px) {
     margin-top: 3rem;
     grid-template-columns: 1fr 1fr;
     row-gap: 1.3rem;
@@ -86,13 +86,13 @@ const MoreLoreCard = styled.div`
     transform: scale(1.01);
   }
 
-  @media only screen and (max-width: 991px) and (-webkit-min-device-pixel-ratio: 1.5) {
+  @media only screen and (max-width: 991px) {
     width: 250px;
     height: 250px;
     font-size: 1.8rem;
   }
 
-  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+  @media only screen and (max-width: 480px) {
     width: 150px;
     height: 150px;
     font-size: 1rem;
@@ -106,26 +106,26 @@ const MoreLore = () => {
       <MoreLoreInnerWrapper>
         <SectionTitle textAlignEnd>Lore</SectionTitle>
         <MoreLoreCardsWrapper>
-          <MoreLoreCard>
-            <Link href="/omnia-accord">
+          <Link href="/omnia-accord">
+            <MoreLoreCard>
               <p>The Omnia Accord</p>
-            </Link>
-          </MoreLoreCard>
-          <MoreLoreCard>
-            <Link href="/imprisoned-deities">
+            </MoreLoreCard>
+          </Link>
+          <Link href="/imprisoned-deities">
+            <MoreLoreCard>
               <p>The Imprisoned Deities</p>
-            </Link>
-          </MoreLoreCard>
-          <MoreLoreCard>
-            <Link href="/infernals-uprising">
+            </MoreLoreCard>
+          </Link>
+          <Link href="/infernals-uprising">
+            <MoreLoreCard>
               <p>Infernals Uprising</p>
-            </Link>
-          </MoreLoreCard>
-          <MoreLoreCard>
-            <Link href="/great-omniwar">
+            </MoreLoreCard>
+          </Link>
+          <Link href="/great-omniwar">
+            <MoreLoreCard>
               <p>The Great Omniwar</p>
-            </Link>
-          </MoreLoreCard>
+            </MoreLoreCard>
+          </Link>
         </MoreLoreCardsWrapper>
       </MoreLoreInnerWrapper>
     </MoreLoreWrapper>

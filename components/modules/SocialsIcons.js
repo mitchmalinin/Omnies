@@ -47,7 +47,7 @@ const SocialsWrapper = styled.div`
   gap: 3rem;
 
   @media only screen and (max-width: 480px) {
-    margin-top: ${({ moreMarginTop }) => (moreMarginTop ? "3.5rem" : "-2rem")};
+    margin-top: 3.5rem;
     margin-left: 10px;
     gap: 2rem;
   }
