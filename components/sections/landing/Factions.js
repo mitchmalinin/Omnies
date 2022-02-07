@@ -101,7 +101,7 @@ const LeaderImgWrapper = styled.div`
     width: 110%;
     position: absolute;
     right: -15px;
-    bottom: 0;
+    bottom: -2px;
     border: 2px solid ${({ borderColor }) => theme[borderColor]};
     border-radius: 5px;
   }
