@@ -2,7 +2,7 @@ export const teamMembers = [
   {
     name: "0xEric",
     twitter: "_0xEric_",
-    role: "Founder & Lead Artist",
+    role: "Project Manager & Lead Artist",
     subRole:
       "Known across all the realms in Omnia as a Visionary, The Forgers unparalleled devotion and creativity makes him the creative genius behind content curation.",
     img: "/images/teamimgs/0xeric.png",
