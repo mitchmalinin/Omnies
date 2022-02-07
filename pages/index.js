@@ -125,6 +125,22 @@ const NavItem = styled.li`
 const Logo = styled.p`
   /* font-family: heater; */
   font-size: 2.5rem;
+  position: relative;
+  &:before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 50%;
+    transform: scale(0, 1);
+    transition: transform 0.3s ease;
+    transform-origin: 0% 100%;
+    background: ${theme.yellow};
+  }
+
+  &:hover:before {
+    transform: scale(1, 1);
+  }
 `
 
 const HeroContentWrapper = styled.div`
