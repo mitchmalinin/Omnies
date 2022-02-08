@@ -300,7 +300,7 @@ export default function Home() {
             </a>
           </HeroInnerContentWrapper>
           <HeroSocials>
-            <SocialsIcons row />
+            <SocialsIcons row location="hero" />
           </HeroSocials>
         </HeroContentWrapper>
         <BorderDivider src="/images/dividers/top.png" />
@@ -324,7 +324,7 @@ export default function Home() {
                 <WorthyButton>Test Your Luck</WorthyButton>
               </a>
             </SocialContentInnerWrapper>
-            <SocialsIcons moreMarginTop />
+            <SocialsIcons moreMarginTop location="footer" />
           </SocialsContentWrapper>
         </Socials>
       </ContentWrapper>
