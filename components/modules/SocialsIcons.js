@@ -57,6 +57,7 @@ const SocialsIcons = ({ row, moreMarginTop }) => {
   return (
     <SocialsWrapper row={row} moreMarginTop={moreMarginTop}>
       <SocialIconWrapper
+        id="small-icon-discord"
         href="https://discord.gg/Zqpp6uQqyg"
         target="_blank"
         rel="noreferrer"
@@ -64,6 +65,7 @@ const SocialsIcons = ({ row, moreMarginTop }) => {
         <i className="fab fa-discord"></i>
       </SocialIconWrapper>
       <SocialIconWrapper
+        id="small-icon-twitter"
         href="https://twitter.com/TheOmnies"
         target="_blank"
         rel="noreferrer"

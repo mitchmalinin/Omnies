@@ -291,6 +291,7 @@ export default function Home() {
             <HeroTitle>Omnia</HeroTitle>
             <HeroSubtitle>REALM OF THE OMNIES</HeroSubtitle>
             <a
+              id="hero-discord"
               href="https://discord.gg/Zqpp6uQqyg"
               target="_blank"
               rel="noreferrer"
@@ -315,6 +316,7 @@ export default function Home() {
             <SocialContentInnerWrapper>
               <p>Are you worthy to wield the power of an Omnie?</p>
               <a
+                id="footer-discord"
                 href="https://discord.gg/Zqpp6uQqyg"
                 target="_blank"
                 rel="noreferrer"
