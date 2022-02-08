@@ -57,7 +57,7 @@ const SocialsIcons = ({ row, moreMarginTop }) => {
   return (
     <SocialsWrapper row={row} moreMarginTop={moreMarginTop}>
       <SocialIconWrapper
-        href="https://discord.gg/sCcQ3x54"
+        href="https://discord.gg/Zqpp6uQqyg"
         target="_blank"
         rel="noreferrer"
       >
