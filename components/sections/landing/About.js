@@ -77,16 +77,23 @@ const About = () => {
             realm of the Gods.
           </AboutDesc>
           <AboutDesc>
-            The Collection will allow holders real world application into the
-            Metaverse. Each Omnie NFT will serve as your key into that factions
-            specified realm in the Metaverse.
+            Omnies is a community driven project. Our core team is composed of
+            seven individuals from various industries and disciplines. All of
+            whom are extremely passionate about the Crypto and NFT space.
           </AboutDesc>
           <AboutDesc>
-            Each Omnie will generate rewards through Metaverse integrated items
-            and renderings.{" "}
-            <span>
-              Are you Worthy of joining the Omnies and ascending to glory?
-            </span>
+            Our goal with Omnies is to foster a community focusing on growth and
+            development. The future direction of the project will be determined
+            by the Omnies community.
+          </AboutDesc>
+          <AboutDesc>
+            Have you ever wondered what goes into creating an NFT? Have you
+            wanted to be a part of an NFT but not have the time? Are you
+            passionate about the crypto and NFT space?
+          </AboutDesc>
+          <AboutDesc>
+            If you answered yes to any of the questions above then you have come
+            to the right place. <span> Are you worthy? </span>
           </AboutDesc>
         </AboutContentInnerWrapper>
       </AboutWrapper>

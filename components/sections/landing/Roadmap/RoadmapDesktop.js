@@ -82,8 +82,8 @@ const RoadmapDesktop = () => (
           <span>
             We believe that a faction is only as strong as its weakest link. We
             will be searching far and wide for those worthy of attaining the
-            title of ‘Omnimpian’ to join our community and help spread the word
-            of the realm.
+            title of ‘Omnimpian’ to join our community and contribute to the
+            realm.
           </span>
         </Tooltip>
       </Phase>
@@ -94,9 +94,9 @@ const RoadmapDesktop = () => (
         <span>Phase 2</span>
         <Tooltip id="phase2" effect="solid">
           <span>
-            Launch of 200 Genesis Omnies - Each Genesis Omnie will earn rewards
-            in various Metaverse related applications during a later Phase (50
-            Atlins, 50 Heroics, 50 Mystics, 50 Infernals)
+            Our focus is on member feedback and building a close-knit Omnie
+            community. We will be seeking community input and insights to ensure
+            our collection is the best it can be.
           </span>
         </Tooltip>
       </Phase>
@@ -107,9 +107,8 @@ const RoadmapDesktop = () => (
         <span>Phase 3</span>
         <Tooltip id="phase3" effect="solid">
           <span>
-            Launch of 8,888 Generative Omnies - Each Generative Omnie will earn
-            rewards in various Metaverse related applications during a later
-            phase (2,222 Atlins, 2,222 Heroics, 2,222 Mystics, 2,222 Infernals)
+            Launch of 200 Genesis Omnies (50 Atlins, 50 Heroics, 50 Mystics, 50
+            Infernals).
           </span>
         </Tooltip>
       </Phase>
@@ -120,13 +119,8 @@ const RoadmapDesktop = () => (
         <span>Phase 7</span>
         <Tooltip id="phase7" effect="solid">
           <span>
-            As the Cabin deep in the woods shakes Omnia appears. Our focus will
-            be on the development and integration of the five realms of Omnia
-            into the Metaverse. The realms will include the Enchanted Forest,
-            The Mainland, The Forgotten Realm, The Trenches, and the Gates of
-            Tartarus. Access to each realm will be based on your Omnie Faction.
-            We will also enlist full 3D versions of our Omnies to be used in
-            various Metaverse applications.
+            Launch of 8,888 Generative Omnies (2,222 Atlins, 2,222 Heroics,
+            2,222 Mystics, 2,222 Infernals).
           </span>
         </Tooltip>
       </Phase>
@@ -138,7 +132,7 @@ const RoadmapDesktop = () => (
         <Tooltip id="phase6" effect="solid">
           <span>
             Launch of The Omnia Store to facilitate the sale of merchandise,
-            weapons and accessories to be used in Metaverse applications.
+            games and accessories.
           </span>
         </Tooltip>
       </Phase>
@@ -149,12 +143,9 @@ const RoadmapDesktop = () => (
         <span>Phase 5</span>
         <Tooltip id="phase5" effect="solid">
           <span>
-            Without a weapon the Deities can not be defeated and the war is
-            lost. All holders will get a 3D weapon to be used in the metaverse
-            as well as a Deity.{" "}
-            <span className="bold">
-              Owning a Genesis Omnie will generate a reward multiplier.
-            </span>
+            The Forger will Giveaway rare items to a select few Omnimpians
+            deemed worthy in each faction. The Forger values Communication,
+            Passion and Creativity.
           </span>
         </Tooltip>
       </Phase>
@@ -165,9 +156,10 @@ const RoadmapDesktop = () => (
         <span>Phase 4</span>
         <Tooltip id="phase4" effect="solid">
           <span>
-            The Forger will Giveaway rare items to a select few Omnimpians
-            deemed worthy in each faction. The Forger values Communication,
-            Passion and Creativity
+            Launch of the “Genesis Tribunal.” The Tribunal outcome will
+            determine the future direction of the project. All Genesis
+            Omnimpians ideas will be heard and put to a vote amongst the
+            community.
           </span>
         </Tooltip>
       </Phase>
