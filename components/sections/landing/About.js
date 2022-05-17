@@ -82,7 +82,7 @@ const About = () => {
             whom are extremely passionate about the Crypto and NFT space.
           </AboutDesc>
           <AboutDesc>
-            Our goal with Omnies is to foster a community focusing on growth and
+            Our goal with Omnies is to foster a community focusing on growth &
             development. The future direction of the project will be determined
             by the Omnies community.
           </AboutDesc>
