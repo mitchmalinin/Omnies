@@ -172,7 +172,7 @@ const Factions = () => {
             <p>
               The Atlins control the oceans and come from 10,000 leagues below
               the surface. With the power of the sea and all it’s creatures and
-              extreme strength the Atlins abilities were crucial in pushing the
+              extreme strength, the Atlins abilities were crucial in pushing the
               Infernals back into the Forgotten Realm.
             </p>
             {/* <MoreButton backgroundColor="teal">More</MoreButton> */}
